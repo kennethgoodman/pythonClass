@@ -9,7 +9,6 @@ from minesweeperHelper import * # gives access to helper functions:
 #						ex: loopThroughBoardAndDo(board, putBomb , None) will place put a bomb at each place
 # putBombsInBoard(board, bombs)
 # printBoard(board)
-
 def fillInBoard(board):
 	# The board should be filled so that each element that is not a * has the number of * directly adjacent in the four cardinal directions
 	# and the four diagonals
@@ -24,3 +23,6 @@ def fillInBoard(board):
 	#		1 2 1
 	#		0 1 *
 	return
+board = createBoard(4,4)
+putBombsInBoard(board,7)
+printBoard(board)

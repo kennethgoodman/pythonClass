@@ -23,12 +23,12 @@ def putBombsInBoard(board, bombs):
  		row = column = 0
  		while bombsLeftToPlace > 0:
  			if(random.random() > (bombsLeftToPlace/bombs - .1) and board[row][column] != "*"):
- 				board[i][j] = "*"
+ 				board[row][column] = "*"
  				bombsLeftToPlace = bombsLeftToPlace - 1.0
  			column = (column + 1)%columns #increment the column
  			if column == 0: #if on the first column
  				row = (row+1)%rows
 def printBoard(board):
 	loopThroughBoardAndDo(board,
-		lambda board,row,column: print(board[row][column],end=""), # function to print each element without a new line
-		lambda a,b: print("")) 								   # function to print a new line at the beggining of each row
+		lambda board,row,column: print(board[row][column],end=" "), # function to print each element without a new line
+		lambda a,b: print("\n")) 								   # function to print a new line at the beggining of each row
