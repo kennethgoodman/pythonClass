@@ -121,6 +121,7 @@ class BinaryNode(treeNode):
 		return ret
 	def __str__(self):
 		return self.createPrintString()
+#Still testing
 n = 4
 t = BinaryTree(2**(n-1))
 t.append(2), t.append(6)
