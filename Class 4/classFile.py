@@ -14,9 +14,9 @@ def getAge():
 	return float(age)
 def findMax(array):
 	maxNbr = max(array)
-	for i in range(len(array)):
-		if float(array[i]) == maxNbr:
-			return i
+	for (index, nbr) in enumerate(array):
+		if float(nbr) == maxNbr:
+			return index
 def maxAge(numberOfStudents):
 	names = []
 	ages = []

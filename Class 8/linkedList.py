@@ -54,6 +54,11 @@ class LinkedList(object):
 		except:
 			return False #not found
 		return True #Found
+	def __iter__(self):
+		current = self.first
+		while current:
+			yield current.getData()
+			current = current.getNext()
 class Node():
 	def __init__(self, data):
 		self.data = data
@@ -66,8 +71,32 @@ class Node():
 		return self.Next
 	def getData(self):
 		return self.data
+	def __le__(self, other):
+		return self.getData() <= other.getData()
+	def __lt__(self, other):
+		return self.getData() < other.getData()
+	def __eq__(self, other):
+		return self.getData() == other.getData()
+	def __gt__(self, other):
+		return self.getData() > other.getData()
+	def __ge__(self, other):
+		return self.getData() >= other.getData()
+	def __ne__(self, other):
+		return self.getData() != other.getData()
+	def __add__(self, other):
+		return self.getData() + other.getData()
+	def __sub__(self, other):
+		return self.getData() - other.getData()
+	def __mul__(self, other):
+		return self.getData() * other.getData()
+	def __hash__(self):
+		return hash(self.data())
+	def __str__(self):
+		return self.data
 #still testing
 l = LinkedList()
 for i in range(1,10):
 	l.prepend(i)
-print(l)
+#print(l)
+for x in l:
+	print(x)
