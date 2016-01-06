@@ -66,6 +66,7 @@ class Node():
 		return self.Next
 	def getData(self):
 		return self.data
+#still testing
 l = LinkedList()
 for i in range(1,10):
 	l.prepend(i)
