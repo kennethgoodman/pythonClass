@@ -23,4 +23,5 @@ def solve(height,towers, fromTower, toTower, withTower):
 		move(towers,fromTower,toTower)
 		solve(height-1,towers, withTower,toTower, fromTower)
 def playTowersOfHanoi():
+        print("playing")
 	return
