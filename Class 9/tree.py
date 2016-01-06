@@ -20,7 +20,6 @@ class BinaryTree(Tree):
 	def __init__(self,rootData):
 		self.root = BinaryNode(rootData)
 	def append(self,data):
-		self.currentSize = False
 		current = self.root
 		last = current
 		while current:
