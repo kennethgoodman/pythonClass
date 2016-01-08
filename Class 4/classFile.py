@@ -32,4 +32,4 @@ def maxProperty(names, property):
 	return [names[indexOfMaxProperty], property[indexOfMaxProperty]]
 #example:
 names, ages = getStudents(3)
-Print( maxAge(names, ages) ) 
+print( maxAge(names, ages) ) 
