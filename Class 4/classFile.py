@@ -18,6 +18,7 @@ def findMax(array):
 	for (index, nbr) in enumerate(array):
 		if float(nbr) == maxNbr:
 			return index
+#change function to accept any string for any property
 def getStudents(numberOfStudents):
        #maybe change to list of tuples instead of two lists
 	names = []
@@ -25,7 +26,10 @@ def getStudents(numberOfStudents):
 	for i in range(numberOfStudents):
 		names.append(getName())
 		ages.append(getAge())
-        return names,ages
-def maxAge(names, grades):
-	maxAge = findMax(ages) #returns index of highest age 
-	return [names[maxAge], ages[maxAge]]
+        return names,ages #was space indented, check if works
+def maxProperty(names, property):
+	indexOfMaxProperty = findMax(property) #returns index of highest age 
+	return [names[indexOfMaxProperty], property[indexOfMaxProperty]]
+#example:
+names, ages = getStudents(3)
+Print( maxAge(names, ages) ) 
