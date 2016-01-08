@@ -25,7 +25,7 @@ def getStudents(numberOfStudents):
 	for i in range(numberOfStudents):
 		names.append(getName())
 		ages.append(getAge())
-       return names,ages
+        return names,ages
 def maxAge(names, grades):
 	maxAge = findMax(ages) #returns index of highest age 
 	return [names[maxAge], ages[maxAge]]
