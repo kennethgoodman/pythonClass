@@ -5,6 +5,7 @@ def createBoard(rows, columns):
 	return [["-"]*columns for i in range(rows)] #return 2d array with all '-'
 def putBomb(board,row,column):
 	board[row][column] = "*"
+#TODO change to named optional arguments
 def loopThroughBoardAndDo(board, function_on_each_element, function_after_each_row):
 	rows = len(board[0])  #is this really columns?, test this
 	for row in range(len(board)):
