@@ -26,6 +26,7 @@ Will be used for sharing code and learning python
 	- [Linux, Unix or Mac OSX](#*nix-operating-systems-such-as-linux,-unix,-mac-osx)
 	- [Windows](#windows)
 3. [Homework](#homework)
+
 #### Scratch 
 To start getting our heads to think more programmatically, we will start with scratch, a free software built to learn the ideas behind coding from the great people at MIT. linked [here](https://scratch.mit.edu/).
 
@@ -36,6 +37,7 @@ If you get stuck, MIT put out a couple tutorial videos [here](https://scratch.mi
 While playing around, it is advised to use blocks from the control section, this will help you create more powerful animations.
 
 #### Setting up python and package managers
+
 ##### *nix operating systems such as linux, unix, mac osx
 Before you start, you may want to read up on a bash primer, or just learn the basic commands.
 
