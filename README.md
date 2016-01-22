@@ -163,7 +163,7 @@ Skim through [this on tuples](http://www.tutorialspoint.com/python/python_tuples
 Skim through [this on python dictionaries](http://www.tutorialspoint.com/python/python_dictionary.htm)
 #### if logic
 #### loops
-##### Homework
+#### Homework
 
 ###### Names and ages
 
@@ -174,10 +174,9 @@ Get 10 names and their assoceated ages from the user, print to the screen: the o
 Get a height from the user and print a triangle (using hashtags) to the screen using that height as the number of hashtags on the bottom row. 
 
 For example if the user enters: 3, the output should be:
-
-   #
-  ##
- ###
+   #\
+  ##\
+ ###\
  
 If the user enters 5, the output should be:
      #
