@@ -178,13 +178,14 @@ For example if the user enters: 3, the output should be:<br />
   ##<br />
  ###<br />
  
-If the user enters 5, the output should be:<br />
+If the user enters 5, the output should be:
+<pre><br />
      #<br />
 	##<br />
    ###<br />
   ####<br />
  #####<br />
- 
+</pre>
 and so on.
 
 You may want to print the triangle the other way first, such as:<br />
