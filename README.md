@@ -21,6 +21,12 @@ Will be used for sharing code and learning python
 	* [Alternate class on backtracking](#alternate-class-on-backtracking)
 
 ### Class 1
+Outline:
+1. [Scratch](#scratch)
+2. [Setting up python](setting-up-python-and-package-managers)
+	* [Linux, Unix or Mac OSX](#*nix-operating-systems-such-as-linux,-unix,-mac-osx)
+	* [Windows](#windows)
+3.[Homework](#homework)
 #### Scratch 
 To start getting our heads to think more programmatically, we will start with scratch, a free software built to learn the ideas behind coding from the great people at MIT. linked [here](https://scratch.mit.edu/).
 
@@ -36,7 +42,7 @@ Before you start, you may want to read up on a bash primer, or just learn the ba
 
 here is a [bash reference](http://ss64.com/bash/). Of course you do not have to know all of them, but some of them you will use more then others, such as: cd, ls, mkdir, find.
 
-Python usually comes installed on these operating systems. To check, open spotlight and search for terminal. Once open type
+Python usually comes installed on these operating systems. To check, open your applications and search for terminal. Once it is opened type
 
 ```sh
 python --version
@@ -59,6 +65,10 @@ if you dont get back a version such as: 2.7.11, then you need to download and in
 
 Google has put out a setup page for python also, linked [here](https://developers.google.com/edu/python/set-up?hl=en)
 
+#### Homework
+
+1. For homework this class, create a scratch project that involves at least three different control blocks, two motion blocks, two event blocks, and two operators blocks.
+2. Set up python on your machine
 ### Class 2
 #### variables, input and output
 ### Class 3
