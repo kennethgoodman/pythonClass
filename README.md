@@ -23,6 +23,13 @@ Will be used for sharing code and learning python
 ### Class 1
 #### Scratch 
 #### Setting up python 
+##### *nix operating systems such as linux, unix, mac osx
+Python usually comes installed on these operating systems. To check, open spotlight and search for terminal. Once open type
+```sh
+python --version
+```
+You should see something like: 2.7.11
+##### Windows
 ### Class 2
 #### variables, input and output
 ### Class 3
