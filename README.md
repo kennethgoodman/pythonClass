@@ -19,6 +19,7 @@ Will be used for sharing code on python class
 10. [Class 10](#[Class 10])
 	* [Final Project](#[Final Project])
 	* [Alternate class on backtracking](#[Alternate class on backtracking])
+
 ### Class 1 ( Scratch and setting up python ) 
 ### Class 2 ( variables, input and output )
 ### Class 3 ( if logic and loops )
