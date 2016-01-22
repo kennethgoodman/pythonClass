@@ -22,14 +22,43 @@ Will be used for sharing code and learning python
 
 ### Class 1
 #### Scratch 
-#### Setting up python 
+To start getting our heads to think more programmatically, we will start with scratch, a free software built to learn the ideas behind coding from the great people at MIT. linked [here](https://scratch.mit.edu/).
+
+To start, I would advise you to create a project and play around.
+
+If you get stuck, MIT put out a couple tutorial videos [here](https://scratch.mit.edu/help/videos/#)
+
+While playing around, it is advised to use blocks from the control section, this will help you create more powerful animations.
+
+#### Setting up python and package managers
 ##### *nix operating systems such as linux, unix, mac osx
+Before you start, you may want to read up on a bash primer, or just learn the basic commands.
+
+here is a [bash reference](http://ss64.com/bash/). Of course you do not have to know all of them, but some of them you will use more then others, such as: cd, ls, mkdir, find.
+
 Python usually comes installed on these operating systems. To check, open spotlight and search for terminal. Once open type
+
 ```sh
 python --version
 ```
 You should see something like: 2.7.11
+
+If not, you can download python [here](https://www.python.org/downloads/)
+
+
+Google has put out a setup page for python also, linked [here](https://developers.google.com/edu/python/set-up?hl=en)
+
+For mac, a great package manager to have is [homebrew](http://brew.sh/), download and install is advised.
 ##### Windows
+Before you start, we will be using the command line, so reading up on a command line [reference](http://ss64.com/nt/) is advised. You don't need to learn all the commands, just some of the more useful ones (such as cd, dir, find, help, md, move, path)
+
+You can test to see if python is install on your machine opening the cmd application and typing: python --version 
+
+if you dont get back a version such as: 2.7.11, then you need to download and install it [here](https://www.python.org/downloads/)
+
+
+Google has put out a setup page for python also, linked [here](https://developers.google.com/edu/python/set-up?hl=en)
+
 ### Class 2
 #### variables, input and output
 ### Class 3
