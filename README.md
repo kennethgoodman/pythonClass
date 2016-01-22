@@ -13,7 +13,8 @@ Will be used for sharing code on python class
 6. [Class 6](#[Class 6])
 	* [Fifteen](#fifteen)
 	* [Minesweeper](#minesweeper)
-7. [Class 7 ( sorting )](#Class 7 ( sorting ))
+7. [Class 7 ( sorting )][1]
+	[1]: #Class 7 ( sorting )
 8. [Class 8 ( data structures and intro to classes )](#[Class 8 ( data structures and intro to classes )])
 9. [Class 9 ( classes continued )](#[Class 9 ( classes continued )])
 10. [Class 10](#[Class 10])
