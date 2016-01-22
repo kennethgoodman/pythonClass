@@ -174,9 +174,9 @@ Get 10 names and their assoceated ages from the user, print to the screen: the o
 Get a height from the user and print a triangle (using hashtags) to the screen using that height as the number of hashtags on the bottom row. 
 
 For example if the user enters: 3, the output should be:
-   _
-  __
- ___
+  $
+ $$
+$$$
  
 If the user enters 5, the output should be:
      #
