@@ -33,7 +33,24 @@ def solve(height,towers, fromTower, toTower, withTower):
 		solve(height-1,towers, fromTower,withTower,toTower)
 		move(towers,fromTower,toTower)
 		solve(height-1,towers, withTower,toTower, fromTower)
+def win(towers):
+	if len(towers[0]) == 0 and (len(towers[1]) == 0 or len(towers[2]) == 0):
+		return True
+	return False
 # need to implement 
 def playTowersOfHanoi():
-        print("playing")
-	return
+    rings = int(input("How many rings? "))
+    towers = createTowers(rings)
+    while True:
+    	printTowers(towers)
+    	fromTower = int(input("Which tower do you want to move from, 0, 1, or 2: "))
+    	toTower   = int(input("Which tower do you want to move to,   0, 1, or 2: "))
+    	if(fromTower != toTower):
+    		try:
+    			move(towers,fromTower, toTower)
+    		except NameError as error:
+    			print(error)
+    	if win(towers):
+    		print("You Won")
+    		return
+playTowersOfHanoi()
