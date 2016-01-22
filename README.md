@@ -118,11 +118,11 @@ Which if you have done everything correctly, should write to the screen: Hello W
 
 #### Reading
 
-To be familar with the upcoming section, skim through [this basic syntax](http://www.tutorialspoint.com/python/python_basic_syntax.htm).
+To be familar with the upcoming section, skim through [this on basic syntax](http://www.tutorialspoint.com/python/python_basic_syntax.htm).
 
-Read through [this variable types](http://www.tutorialspoint.com/python/python_variable_types.htm).
+Read through [this on variable types](http://www.tutorialspoint.com/python/python_variable_types.htm).
 
-Skim through [this basic operations](http://www.tutorialspoint.com/python/python_basic_operators.htm).
+Skim through [this on basic operations](http://www.tutorialspoint.com/python/python_basic_operators.htm).
 
 Read through [this on decision making](http://www.tutorialspoint.com/python/python_decision_making.htm) carefully.
 
@@ -173,29 +173,31 @@ Get 10 names and their assoceated ages from the user, print to the screen: the o
 
 Get a height from the user and print a triangle (using hashtags) to the screen using that height as the number of hashtags on the bottom row. 
 
-For example if the user enters: 3, the output should be:<br />
-   #<br />
-  ##<br />
- ###<br />
+For example if the user enters: 3, the output should be:
+<pre>
+   #
+  ##
+ ###
+</pre>
  
 If the user enters 5, the output should be:
-<pre><br />
-     #<br />
-	##<br />
-   ###<br />
-  ####<br />
- #####<br />
+<pre>
+     #
+	##
+   ###
+  ####
+ #####
 </pre>
 and so on.
 
-You may want to print the triangle the other way first, such as:<br />
-
- # <br />
- ## <br />
- ### <br />
- #### <br />
- ##### <br />
- 
+You may want to print the triangle the other way first, such as:
+<pre>
+ #
+ ##
+ ###
+ ####
+ #####
+</pre>
  would be for an input of 5. The challenge is doing it the first way, but doing it this way first may make it easier.
  
 ### Class 4
@@ -225,18 +227,26 @@ Write a program that prints the numbers from 1 to 100. But for multiples of thre
 It will be useful to understand the modulo operator, if statements, and looping.
 
 ### Class 5
+
+1. [Reading](#reading)
+2. [Tower of Hanoi](#tower-of-hanoi)
+3. [Homework](#homework)
+
 #### Reading
 
 Skim through [this on exceptions](http://www.tutorialspoint.com/python/python_exceptions.htm)
 Read through [wiki on tower of hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi) as we will be using it a lot this class.
 
-#### tower of hanoi
+#### Tower of Hanoi
+
+#### Homework
 
 ### Class 6
 
 1. [Reading](#reading)
 2. [Fifteen](#fifteen)
 3. [Minesweeper](#minesweeper)
+4. [Homework](#homework)
 
 #### Reading
 Play [this](http://migo.sixbit.org/puzzles/fifteen/) game, and get ready to build it.
@@ -246,6 +256,8 @@ Read up on [this](https://en.wikipedia.org/wiki/Microsoft_Minesweeper) classic g
 
 #### Minesweeper
 
+#### Homework
+
 ### Class 7
 
 1. [Reading](#reading)
@@ -253,6 +265,7 @@ Read up on [this](https://en.wikipedia.org/wiki/Microsoft_Minesweeper) classic g
 	- [Bubble Sort](#bubble-sort)
 	- [Merge Sort](#merge-sort)
 	- [Insertion sort](#insertion-sort)
+3. [Homework](#homework)
 	
 #### Reading
 Read through these sorting alogrithms: 
@@ -269,8 +282,15 @@ You can watch a clip [here](https://www.youtube.com/watch?v=sWtYJv_YXbo) explain
 ##### Insertion sort
 You can watch a clip [here](https://www.youtube.com/watch?v=TwGb6ohsvUU) explaining Insertion sort.
 
+#### Homework
+
 ### Class 8
 1. [Reading](#reading)
+	- [Data Structes](#data-structures-reading)
+	- [Classes](#reading-on-classes)
+2. [Data Structures](#data-structure)
+3. [Intro to classes](#intro-to-classes)
+4. [Homework](#homework)
 
 #### Reading
 
@@ -278,15 +298,36 @@ You can watch a clip [here](https://www.youtube.com/watch?v=TwGb6ohsvUU) explain
 You may want to go back and get a better understanding of [Lists](http://www.tutorialspoint.com/python/python_lists.htm),
 [tuples](http://www.tutorialspoint.com/python/python_tuples.htm), [dictionaries](http://www.tutorialspoint.com/python/python_dictionary.htm) in python.
 
-Furthermore, you should skim through [Linked Lists](https://en.wikipedia.org/wiki/Linked_list) and take a look at some of the data structures [here](https://en.wikipedia.org/wiki/List_of_data_structures)(some are less important than others). In general the most important ones are [arrays](https://en.wikipedia.org/wiki/Array_programming) (in python lists), [hashtables](https://en.wikipedia.org/wiki/Hash_table) (in python dictionaries), [tuples](https://en.wikipedia.org/wiki/Tuple), [linked lists](https://en.wikipedia.org/wiki/Linked_list), [trees](https://en.wikipedia.org/wiki/Tree_(data_structure)) (we will cover in class 9), [Graphs](<https://en.wikipedia.org/wiki/Graph_(abstract_data_type)>), [Stacks](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>) (Cover in class 10 in sudoku), and [Heaps](<https://en.wikipedia.org/wiki/Heap_(data_structure)>).
+Furthermore, you should skim through [Linked Lists](https://en.wikipedia.org/wiki/Linked_list) and take a look at some of the data structures [here](https://en.wikipedia.org/wiki/List_of_data_structures) (some are less important than others). In general the most important ones are [arrays](https://en.wikipedia.org/wiki/Array_programming) (in python lists), [hashtables](https://en.wikipedia.org/wiki/Hash_table) (in python dictionaries), [tuples](https://en.wikipedia.org/wiki/Tuple), [linked lists](https://en.wikipedia.org/wiki/Linked_list), [trees](https://en.wikipedia.org/wiki/Tree_(data_structure)) (we will cover in class 9), [Graphs](<https://en.wikipedia.org/wiki/Graph_(abstract_data_type)>), [Stacks](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>) (Cover in class 10 in sudoku), and [Heaps](<https://en.wikipedia.org/wiki/Heap_(data_structure)>).
 
 ###### Reading on classes
+
+The readings here are more for you to skim, there will be more for next week, this is really a primer.
+Classes overview: [tutorialspoint](http://www.tutorialspoint.com/python/python_classes_objects.htm) and [python-course](http://www.python-course.eu/python3_magic_methods.php)
+
+magic methods: [rafekettler](http://www.rafekettler.com/magicmethods.html) or [python-course](http://www.python-course.eu/python3_magic_methods.php) works fine.
 
 #### Data Structures
 
 #### Intro to classes
+
+#### Homework
+
 ### Class 9
-####  classes continued
+
+1. [Reading](#Reading)
+2. [Classes Continued](#classes-continued)
+3. [Homework](#homework)
+
+#### Reading
+#### Classes continued
 ### Class 10
+
+1. [Reading](#reading)
+2. [Final Project](#final-project)
+3. [Sudoku](#sudoku)
+4. [Homework](#homework)
+
 #### Final Project
-#### Alternate class on backtracking
+#### Sudoku
+#### Homework
