@@ -33,3 +33,61 @@ def printBoard(board):
 	loopThroughBoardAndDo(board,
 		lambda board,row,column: print(board[row][column],end=" "), # function to print each element without a new line
 		lambda a,b: print("\n")) 								   # function to print a new line at the beggining of each row
+def printPlayBoard(board,bombs):
+	print("Bombs: " + str(bombs))
+	for i in range(len(board[0])):
+		print(str(i), end=" ")
+	print("")
+	for i in range(len(board[0])*2):
+		print("-",end="")
+	print("")
+	loopThroughBoardAndDo(board, lambda board,row,column: print(board[row][column],end=" ") , lambda board,row: print("|" + str(row)))
+def playMineSweeper(rows, columns, bombs):
+	fullBoard = createBoard(rows, columns)
+	putBombsInBoard(fullBoard, bombs)
+	fillInBoard(fullBoard)
+	#printBoard(fullBoard) 	# for testing
+	#print("")				# for testing
+	playBoard = createBoard(rows, columns)
+	playingGame = True
+	printPlayBoard(playBoard,bombs)
+	totalFound = 0
+	while playingGame:
+		############################## Get Input ##############################
+		row = int(input("enter the row: "))
+		column = int(input("enter the column: "))
+		############################## Get Input ##############################
+		
+		if(playBoard[row][column] == "-"):
+			element = playBoard[row][column] = fullBoard[row][column]
+			totalFound += 1
+		else:
+			continue
+		if element == "*": #if bomb
+			print("You lost")
+			playingGame = False
+		else: #if not bomb
+			if element == 0: #if zero bombs surrounding
+				def allDirectionsDo(totalFound,ifFunc, doFunc):
+					directions = [(-1,1), (0,1), (1,1),
+								  (-1,0),        (1,0),
+								  (-1,-1),(0,-1),(1,-1)]
+					for direction in directions:
+						x,y = direction
+						try: #protect against index out of range
+							if(ifFunc(x,y)):
+								doFunc(totalFound,x,y)
+						except IndexError:
+							continue 
+					return totalFound
+				def setBoard(totalFound,x,y):
+					playBoard[x+row][y+column] = fullBoard[x+row][y+column]
+					#if(playBoard[x+row][y+column] == "0"):
+					#	totalFound = allDirectionsDo(totalFound, lambda a,b: (a+x+row >= 0 and b+y+column >= 0 and playBoard[a+x+row][b+y+column] == "-"), setBoard)
+					totalFound += 1
+				totalFound = allDirectionsDo(totalFound, lambda x,y: (x+row >= 0 and y+column >= 0 and playBoard[x+row][y+column] == "-"), setBoard)		
+			printPlayBoard(playBoard,bombs)
+		if totalFound == rows*columns - bombs:
+			print("You\'ve won!")
+			playingGame = False
+			
