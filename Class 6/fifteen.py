@@ -32,17 +32,9 @@ def move(board,row,column,x,y):
 	except (IndexError, NameError): #error was thrown for
                # illegal move or outside bounds
 		raise NameError("Can\'t move like that")
-def getMove():
+def getMove(switcher, defualt):
 	direction = input("Left (a),right (d), up (w) or down (s): ").lower() # get direction
-       #four possible directions
-       #TODO: move outside func to make more polymorphic 
-	switcher = {
-		'w': {'x':0,'y':-1},
-		'a': {'x':-1,'y':0},
-		's': {'x':0,'y':1},
-		'd': {'x':1,'y':0},
-	}
-	return switcher.get(direction, {'x':0,'y':0}) #defualt is no movement
+	return switcher.get(direction, defualt) 
 def win(board):
 	for row in range(4):
 		for column in range(4):
@@ -63,8 +55,15 @@ def playFifteen():
 	row = column = 3 # starting place for empty space
        # row and column keep track of the empty space
 	playingGame = True
+	switcher = { #four possible directions
+		'w': {'x':0, 'y':-1},
+		'a': {'x':-1,'y':0},
+		's': {'x':0, 'y':1},
+		'd': {'x':1, 'y':0},
+	}
+	defualt = {'x':0,'y':0} #defualt is no movement
 	while playingGame:
-		currentMove = getMove()
+		currentMove = getMove(switcher,defualt)
 		try:
 			move(board,row,column, currentMove['x'], currentMove['y'])
                       #move the empty square
