@@ -48,7 +48,7 @@ If not, you can download python [here](https://www.python.org/downloads/)
 
 Google has put out a setup page for python also, linked [here](https://developers.google.com/edu/python/set-up?hl=en)
 
-For mac, a great package manager to have is [homebrew](http://brew.sh/), download and install is advised.
+For mac, a great package manager to have is [homebrew](http://brew.sh/), download and instalation is advised.
 ##### Windows
 Before you start, we will be using the command line, so reading up on a command line [reference](http://ss64.com/nt/) is advised. You don't need to learn all the commands, just some of the more useful ones (such as cd, dir, find, help, md, move, path)
 
