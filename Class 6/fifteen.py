@@ -14,15 +14,8 @@ def createBoard():
 	return board
 def move(board,row,column,x,y):
 	try:
-               # check if the user wants to move either in the X or y direction, 
-               # not one space 
-               # or if the user wants to move more than one space
-               # or if the user wants to move diagonally 
-               # we want the movement to be one of four options: 
-               # (+/-1,0) or (0,+/-1)
-               # change this to be quicker and more readable 
-		if((abs(x) != 1 and abs(y) !=1) or abs(x) > 1 or abs(y) > 1 or (abs(x) == 1 and abs(y) == 1)):
-			raise NameError("") #if illegal, throw error
+		if((abs(x), abs(y)) not in [(1,0),(0,1)]):
+			raise NameError("Illegal Move") #if illegal, throw error
 		if(row+y >= 0 and column+x >=0): #if moving in the board
 			temp = board[row][column]
 			board[row][column] = board[row+y][column+x]
@@ -75,4 +68,4 @@ def playFifteen():
 		if(win(board)): #game is won
 			playingGame = False #will end loop
 			print("You won!")
-#playFifteen()
+playFifteen()
