@@ -173,27 +173,27 @@ Get 10 names and their assoceated ages from the user, print to the screen: the o
 
 Get a height from the user and print a triangle (using hashtags) to the screen using that height as the number of hashtags on the bottom row. 
 
-For example if the user enters: 3, the output should be:
-  $<br />
- $$<br />
-$$$
+For example if the user enters: 3, the output should be:<br />
+   #<br />
+  ##<br />
+ ###<br />
  
-If the user enters 5, the output should be:
-     #
-	##
-   ###
-  ####
- #####
+If the user enters 5, the output should be:<br />
+     #<br />
+	##<br />
+   ###<br />
+  ####<br />
+ #####<br />
  
 and so on.
 
-You may want to print the triangle the other way first, such as:
+You may want to print the triangle the other way first, such as:<br />
 
- #
- ##
- ###
- ####
- #####
+ # <br />
+ ## <br />
+ ### <br />
+ #### <br />
+ ##### <br />
  
  would be for an input of 5. The challenge is doing it the first way, but doing it this way first may make it easier.
  
