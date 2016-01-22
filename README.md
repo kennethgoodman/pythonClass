@@ -5,7 +5,7 @@ Will be used for sharing code on python class
 
 ## An outline for the course
 
-1. [Class 1 ( Scratch and setting up python )](#class 1)
+1. [Class 1 ( Scratch and setting up python )](#class-1)
 2. [Class 2 ( variables, input and output )](#class 2)
 3. [Class 3 ( if logic and loops )](#class 3)
 4. [Class 4 ( loops/functions and FizzBuzz )](#class 4)
