@@ -28,7 +28,7 @@ Will be used for sharing code and learning python
 2. [Setting up python](setting-up-python-and-package-managers)
 	- [Linux, Unix or Mac OSX](#nix-operating-systems-such-as-linux-unix-mac-osx)
 	- [Windows](#windows)
-3. [Homework](#homework)
+3. [Homework](#homework-class-1)
 4. [Text editor](#text-editor)
 5. [First program](#first-program)
 
@@ -106,21 +106,21 @@ python helloworld.py
 
 Which if you have done everything correctly, should write to the screen: Hello World!
 
-#### Homework
+#### Homework Class 1
 
 1. For homework this class, create a scratch project that involves at least three different control blocks, two motion blocks, two event blocks, and two operators blocks.
 2. Set up python on your machine
 
 ### Class 2
 
-1. [Reading](#reading)
+1. [Reading](#reading-class-2)
 2. [Basics of programming](#basics-of-programming)
 	- [Variables](#variables)
 	- [Input and output](#input and output)
 	- [If statements](#if-statements)
-3. [Homework](#homework)
+3. [Homework](#homework-class-2)
 
-#### Reading
+#### Reading Class 2
 
 To be familar with the upcoming section, skim through [this on basic syntax](http://www.tutorialspoint.com/python/python_basic_syntax.htm).
 
@@ -154,7 +154,31 @@ To play around with this, open the interpreter (by typing python in your termina
 
 ##### input and output
 
-You may want to read [this](http://www.python-course.eu/input.php) before you continue.
+If we want to output what the user just gave us, we use 'print', it does not matter about the internals here at this point, for our sake lets use it as a function like so:
+
+```python
+print("Hello World")
+```
+
+You may want to skim through [this](http://www.python-course.eu/input.php) before you continue.
+
+Input in python is simple but is different depending on your version. If you are using python 2.7 or less than you want to use raw_input() if your using python 3 or above, you want to use input(). In the class folder there is a helpFunctions.py file, you can read through it if you'd like. To get the users name:
+
+```python
+from helperFunctions import *
+name = getString("Please enter a name")
+```
+and to print it
+
+```python
+print(name)
+```
+
+or
+
+```python
+print("Hello " + name)
+```
 
 ##### If statements
 If statements are a logical way to make decisions based on unknown input. We use if statements in our lives all the time. For example, we say "if I am late, leave without me", "If I don't catch the bus, I'll take a cab". 
@@ -177,7 +201,7 @@ else:
 
 the if statement checks if x is less than zero, if it is it will set x to zero and print: 'Negative changed to zero', if it is not and if (else if) x is zero then print: 'Zero', if it is not and if x is 1, print: 'Single', else in all other cases, print: 'More'
 
-#### Homework
+#### Homework Class 2
 
 Now that you know how to get input from the user, you will do some logic on the users input.
 
@@ -203,13 +227,13 @@ You may use the helperfunctions file. There you can find the functions between(c
 
 ### Class 3
 
-1. [Reading](#reading)
+1. [Reading](#reading-class-3)
 2. [Loops](#loops)
-3. [Homework](#homework)
+3. [Homework](#homework-class-3)
 	- [Names and ages](#names-and-ages)
 	- [Hashtag triangle](#hashtag-triangle)
 	
-#### Reading
+#### Reading Class 3
 Read through [this on loops](http://www.tutorialspoint.com/python/python_loops.htm) carefully as well.
 Skim through [this on Lists](http://www.tutorialspoint.com/python/python_lists.htm).
 Skim through [this on tuples](http://www.tutorialspoint.com/python/python_tuples.htm).
@@ -218,7 +242,7 @@ Skim through [Control Flow Python](https://docs.python.org/2/tutorial/controlflo
 
 #### loops
 
-#### Homework
+#### Homework Class 3
 
 ##### Names and ages
 
@@ -257,16 +281,16 @@ You may want to print the triangle the other way first, such as:
  
 ### Class 4
 
-1. [Reading](#reading)
+1. [Reading](#reading-class-4)
 2. [Loops](#loops)
 3. [Functions](#functions)
-4. [Homework](#Homework)
+4. [Homework](#Homework-class-4)
 	- [FizzBuzz](#fizzbuzz)
 	- [Caesar Cipher](#caesar-cipher)
 		- [Encription](#encription)
 		- [Decription](#decription)
 
-#### Reading
+#### Reading Class 4
 
 Read through [this on functions](http://www.tutorialspoint.com/python/python_functions.htm) carefully. This is a very important concept in programming that will really save you a lot of time.
 
@@ -276,7 +300,7 @@ Read the first answer [on the modulo operator here](http://stackoverflow.com/que
 
 #### Loops
 #### Functions 
-#### Homework
+#### Homework Class 4
 
 ##### FizzBuzz
 
@@ -309,13 +333,13 @@ For example, if our encripted code is 'z lzm hr z gtlzm' then since we are deali
 
 ### Class 5
 
-1. [Reading](#reading)
+1. [Reading](#reading-class-5)
 2. [Recursion](#recursion)
-3. [Homework](#homework)
+3. [Homework](#homework-class-5)
 	- [Tower of Hanoi](#tower-of-hanoi)
 	- [Vigenere Cipher](#vigenere-cipher) 
 
-#### Reading
+#### Reading Class 5
 
 Skim through [this on exceptions](http://www.tutorialspoint.com/python/python_exceptions.htm)
 Read through [wiki on tower of hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi) as we will be using it a lot this class.
@@ -341,7 +365,7 @@ def factorial(n):
 
 As we see here, we have a base case when we stop (when n = 1) and on each interation n gets closer to the base case, assuming the user enters a positive integer.
 
-#### Homework
+#### Homework Class 5
 
 ##### Tower of Hanoi
 
@@ -361,12 +385,12 @@ Decripting this algorithm is a bit harder, but not impossible. This problem is a
 
 ### Class 6
 
-1. [Reading](#reading)
+1. [Reading](#reading-class-6)
 2. [Fifteen](#fifteen)
 3. [Minesweeper](#minesweeper)
-4. [Homework](#homework)
+4. [Homework](#homework-class-6)
 
-#### Reading
+#### Reading Class 6
 Play [this](http://migo.sixbit.org/puzzles/fifteen/) game, and get ready to build it.
 Read up on [this](https://en.wikipedia.org/wiki/Microsoft_Minesweeper) classic game, get ready to build a similar version as well.
 
@@ -374,18 +398,18 @@ Read up on [this](https://en.wikipedia.org/wiki/Microsoft_Minesweeper) classic g
 
 #### Minesweeper
 
-#### Homework
+#### Homework Class 6
 
 ### Class 7
 
-1. [Reading](#reading)
+1. [Reading](#reading-class-7)
 2. [Sorting](#sorting)
 	- [Bubble Sort](#bubble-sort)
 	- [Merge Sort](#merge-sort)
 	- [Insertion sort](#insertion-sort)
-3. [Homework](#homework)
+3. [Homework](#homework-class-7)
 	
-#### Reading
+#### Reading Class 7
 Read through these sorting alogrithms: 
 	[bubblesort](https://en.wikipedia.org/wiki/Bubble_sort)
 	[merge sort](https://en.wikipedia.org/wiki/Merge_sort)
@@ -400,17 +424,17 @@ You can watch a clip [here](https://www.youtube.com/watch?v=sWtYJv_YXbo) explain
 ##### Insertion sort
 You can watch a clip [here](https://www.youtube.com/watch?v=TwGb6ohsvUU) explaining Insertion sort.
 
-#### Homework
+#### Homework Class 7
 
 ### Class 8
-1. [Reading](#reading)
+1. [Reading](#reading-class-8)
 	- [Data Structes](#data-structures-reading)
 	- [Classes](#reading-on-classes)
 2. [Data Structures](#data-structure)
 3. [Intro to classes](#intro-to-classes)
-4. [Homework](#homework)
+4. [Homework](##homework-class-8)
 
-#### Reading
+#### Reading Class 8
 
 ###### Data Structures reading
 You may want to go back and get a better understanding of [Lists](http://www.tutorialspoint.com/python/python_lists.htm),
@@ -429,40 +453,41 @@ magic methods: [rafekettler](http://www.rafekettler.com/magicmethods.html) or [p
 
 #### Intro to classes
 
-#### Homework
+#### Homework Class 8
 
 ### Class 9
 
-1. [Reading](#Reading)
+1. [Reading](#reading-class-10)
 2. [Classes Continued](#classes-continued)
-3. [Homework](#homework)
+3. [Homework](#homework-class-9)
 
-#### Reading
+#### Reading Class 9
 #### Classes continued
-#### Homework
+#### Homework Class 9
 ### Class 10
 
-1. [Reading](#reading)
+1. [Reading](#reading-class-10)
 2. [Final Project](#final-project)
 3. [Sudoku](#sudoku)
-4. [Homework](#homework)
+4. [Homework](#homework-class-10)
 
+#### Reading Class 10
 #### Final Project
 #### Sudoku
-#### Homework
+#### Homework Class 10
 
 ### Python References
 
-- [Code Like a Pythonista: Idiomatic Python](#http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
-- [Python documentation 3.5.1](#https://docs.python.org/3/)
-- [Python documentation 2.7.11](#https://docs.python.org/2.7/)
-- [tutorialspoint](#http://www.tutorialspoint.com/python/)
-- [Free Python Books](#https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#python)
+- [Code Like a Pythonista: Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
+- [Python documentation 3.5.1](https://docs.python.org/3/)
+- [Python documentation 2.7.11](https://docs.python.org/2.7/)
+- [tutorialspoint](http://www.tutorialspoint.com/python/)
+- [Free Python Books](https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#python)
 
 ### Text editors and misc.
 
-- [Sublime Text](#http://www.sublimetext.com/)
-- [Vim](#http://www.vim.org/)
-	- [Vim Tutorial](#http://www.openvim.com/sandbox.html)
-- [Markdown](#https://daringfireball.net/projects/markdown/)
-	- [Markdown Cheatsheet](#https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [Sublime Text](http://www.sublimetext.com/)
+- [Vim](http://www.vim.org/)
+	- [Vim Tutorial](http://www.openvim.com/sandbox.html)
+- [Markdown](https://daringfireball.net/projects/markdown/)
+	- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
