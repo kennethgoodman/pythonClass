@@ -293,13 +293,10 @@ Will be used for sharing code and learning python
 				<a href="#python-references">Python References</a>
 			</li>
 			<li>
-				<a href="#text-editors-and-misc.">Text editors and misc.</a>
+				<a href="#text-editors-and-misc">Text editors and misc.</a>
 			</li>
 		</ol>
 	</div>
-</div>
-<div>
-<br></br><br><br><br>
 </div>
 
 ### Class 1
