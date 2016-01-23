@@ -21,7 +21,7 @@ Will be used for sharing code and learning python
 	* [Final Project](#final-project)
 	* [Alternate class on backtracking](#alternate-class-on-backtracking)
 11. [Python References](#python-references)
-12. [Text editors](#text-editors)
+12. [Text editors and misc.](#text-editors-and-misc.)
 
 ### Class 1
 1. [Scratch](#scratch)
@@ -495,20 +495,20 @@ Now if we functionize it, we can sum the numbers from 1 -> n
 
 ```python
 def sum_from_one_to_n(n):
-	sum = 0
+	currentSum = 0
 	for x in range(1,n+1):
-		sum = sum + x
-	return sum
+		currentSum = currentSum + x
+	return currentSum
 ```
 
 Now if we want to sum from a -> b:
 
 ```python
 def sum_from_a_to_b(a,b):
-	sum = 0
+	currentSum = 0
 	for x in range(a,b+1):
-		sum = sum + x
-	return sum
+		currentSum = currentSum + x
+	return currentSum
 ```
 
 Now that was easy, we know have a function that will sum any amount of numbers, starting from anyplace.
@@ -550,7 +550,7 @@ For example, if our encripted code is 'z lzm hr z gtlzm' then since we are deali
 
 1. [Reading](#reading-class-5)
 2. [Recursion](#recursion)
-3. [Lambdas](#Lambdas)
+3. [Lambdas](#lambdas)
 4. [Homework](#homework-class-5)
 	- [Tower of Hanoi](#tower-of-hanoi)
 	- [Vigenere Cipher](#vigenere-cipher) 
@@ -594,9 +594,10 @@ def square(x):
 def cube(x):
 	return x*x*x
 def sum_from_a_to_b(a,b,function):
-	sum = 0
+	currentSum = 0
 	for x in range(a,b+1):
-		sum = sum + function(x)
+		currentSum = currentSum + function(x)
+	return currentSum
  #now lets use it
 print( sum_from_a_to_b(1,10,square) ) # will print the sum of the squares
 print( sum_from_a_to_b(1,10,cube) )   # will print the sum of the cubes
@@ -651,7 +652,8 @@ Read up on [this](https://en.wikipedia.org/wiki/Microsoft_Minesweeper) classic g
 	- [Bubble Sort](#bubble-sort)
 	- [Merge Sort](#merge-sort)
 	- [Insertion sort](#insertion-sort)
-3. [Homework](#homework-class-7)
+3. [Big O Notation](#big-o-notation)
+4. [Homework](#homework-class-7)
 	
 #### Reading Class 7
 Read through these sorting alogrithms: 
@@ -668,6 +670,8 @@ You can watch a clip [here](https://www.youtube.com/watch?v=sWtYJv_YXbo) explain
 ##### Insertion sort
 You can watch a clip [here](https://www.youtube.com/watch?v=TwGb6ohsvUU) explaining Insertion sort.
 
+#### Big O Notation
+
 #### Homework Class 7
 
 ### Class 8
@@ -675,6 +679,15 @@ You can watch a clip [here](https://www.youtube.com/watch?v=TwGb6ohsvUU) explain
 	- [Data Structes](#data-structures-reading)
 	- [Classes](#reading-on-classes)
 2. [Data Structures](#data-structure)
+	- [Hashing](#hashing)
+	- [Linked Lists](#linked-lists)
+	- [Trees](#trees)
+	- [Queues](#queues)
+	- [Stacks](#stacks)
+	- [Tuples](#tuples)
+	- [Heaps](#heaps)
+	- [Graphs](#graphs)
+	- [Mutability](#mutability)
 3. [Intro to classes](#intro-to-classes)
 4. [Homework](##homework-class-8)
 
@@ -695,9 +708,21 @@ magic methods: [rafekettler](http://www.rafekettler.com/magicmethods.html) or [p
 
 #### Data Structures
 
+##### Hashing
+##### Linked Lists
+##### Trees
+##### Queues
+##### Stacks
+##### Tuples
+##### Heaps
+##### Graphs
+##### Mutability
+
 #### Intro to classes
 
 #### Homework Class 8
+
+The homework for this class will be more of a self study then a project. Being able to implement a sorting alogrithm or common data structure is useful but not essential. People have already optimized most data structures and sorting algorithms, so doing it yourself would only be for learning sake. I would suggest you look at the class file and get a better understanding of how classes are creates to create a data structures. Furtheremore I suggest you try and read through the pseudocode for various sorting algorithms on wikiepedia and try to implement them in python. If you get stuck, the internet has the answers.
 
 ### Class 9
 
@@ -707,7 +732,14 @@ magic methods: [rafekettler](http://www.rafekettler.com/magicmethods.html) or [p
 
 #### Reading Class 9
 #### Classes continued
+##### Ingeritance
+##### Polymorphism
+##### Magic Methods
 #### Homework Class 9
+
+Similar to last week, it is hard to give homework without having you do whats already been done, I think it would be more useful to understand the theory here then the exact implementation. 
+
+As an aside homework, you can and should start on the final project. There are various options listed below.
 ### Class 10
 
 1. [Reading](#reading-class-10)
@@ -717,6 +749,15 @@ magic methods: [rafekettler](http://www.rafekettler.com/magicmethods.html) or [p
 
 #### Reading Class 10
 #### Final Project
+1. Brick breaker (using [pygame](http://pygame.org/hifi.html))
+2. something with [matplotlib](http://matplotlib.org/)
+3. something with [numpy](http://www.numpy.org/)
+4. something with [sympy](http://www.sympy.org/en/index.html)
+5. [Monte Carlo Simulation](https://en.wikipedia.org/wiki/Monte_Carlo_method)
+6. [Greedy algorithms](https://en.wikipedia.org/wiki/Greedy_algorithm) for problems
+7. [Backtracking](https://en.wikipedia.org/wiki/Backtracking) (see sudoku)
+8. [8 Queens Puzzle](https://en.wikipedia.org/wiki/Eight_queens_puzzle)
+
 #### Sudoku
 #### Homework Class 10
 
