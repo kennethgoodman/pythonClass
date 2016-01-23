@@ -1,6 +1,7 @@
 def between(start, end):
 	return list(map(int, range(start, end+1))) #returns list of numbers between start and end
-# will eventually combine this other between() for characters for more English-like code 
+# will eventually combine this with other between() for characters for more English-like code 
+#check class 2 file for explanation
 def aNumber(nbr):
 	return nbr.isdigit()
 def getName():

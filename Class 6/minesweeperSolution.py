@@ -26,7 +26,7 @@ def fillInBoard(board):
 	def putNumber(board,row,column):
 		if(board[row][column] != "*"):
 			board[row][column] = getNumberOfBombsSurrounding(board,row,column)
-	loopThroughBoardAndDo(board,putNumber, None)
+	loopThroughBoardAndDo(board,function_on_each_element=putNumber)
 	# The board should be filled so that each element that is not a * has the number of * directly adjacent in the four cardinal directions
 	# and the four diagonals
 	# Implement this function to have the board print out the correct number in each box

@@ -1,4 +1,5 @@
 #similar to class 2 between() but uses numbers instead
+#check classFile for class 2 for explanation of function
 def between(start, end):
 	return list(map(int, range(start, end+1)))
 #checks if input is number
@@ -10,6 +11,7 @@ name = input('Enter a name: ')
 while not all(character.isalpha() or character.isspace() for character in name): 
 	name = input(str(name) + " is not a name that only contains letters or spaces, re-enter: ")
 print('Hello ' + name)
+
 age = input('Enter your age: ')
 while not aNumber(age) or float(age) not in between(0,120): #if number between 0 and 120
 	age = input(str(age) + " is not a number or reasonable age, re-enter: ")

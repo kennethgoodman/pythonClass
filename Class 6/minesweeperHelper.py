@@ -6,17 +6,17 @@ def createBoard(rows, columns):
 def putBomb(board,row,column):
 	board[row][column] = "*"
 #TODO change to named optional arguments
-def loopThroughBoardAndDo(board, function_on_each_element, function_after_each_row):
+def loopThroughBoardAndDo(board, function_on_each_element=None, function_after_each_row=None):
 	rows = len(board[0])  #is this really columns?, test this
 	for row in range(len(board)):
 		for column in range(rows):
-			if(function_on_each_element): #if it exists
+			if(function_on_each_element): #if it exists, maybe change to callable(function...)
 				function_on_each_element(board,row ,column)
 		if(function_after_each_row):
 			function_after_each_row(board,row)
 def putBombsInBoard(board, bombs):
  	if bombs >= len(board)*len(board[0]): # if the user wants as many bombs as their are spaces or more, fill the board with bombs
- 		loopThroughBoardAndDo(board, putBomb , None) 
+ 		loopThroughBoardAndDo(board, function_on_each_element=putBomb) 
  	else:
  		bombsLeftToPlace = float(bombs) #convert to float so that we can do fractional math with it
  		columns = len(board[0])
@@ -31,8 +31,8 @@ def putBombsInBoard(board, bombs):
  				row = (row+1)%rows
 def printBoard(board):
 	loopThroughBoardAndDo(board,
-		lambda board,row,column: print(board[row][column],end=" "), # function to print each element without a new line
-		lambda a,b: print("\n")) 								   # function to print a new line at the beggining of each row
+		function_on_each_element=lambda board,row,column: print(board[row][column],end=" "), # function to print each element without a new line
+		function_after_each_row=lambda a,b: print("\n")) 								   # function to print a new line at the beggining of each row
 def printPlayBoard(board,bombs):
 	print("Bombs: " + str(bombs))
 	for i in range(len(board[0])):
@@ -41,7 +41,9 @@ def printPlayBoard(board,bombs):
 	for i in range(len(board[0])*2):
 		print("-",end="")
 	print("")
-	loopThroughBoardAndDo(board, lambda board,row,column: print(board[row][column],end=" ") , lambda board,row: print("|" + str(row)))
+	loopThroughBoardAndDo(board, 
+		function_on_each_element=lambda board,row,column: print(board[row][column],end=" "), 
+		function_after_each_row= lambda board,row: print("|" + str(row)))
 def playMineSweeper(rows, columns, bombs):
 	fullBoard = createBoard(rows, columns)
 	putBombsInBoard(fullBoard, bombs)

@@ -165,11 +165,11 @@ Skim through [this on python dictionaries](http://www.tutorialspoint.com/python/
 #### loops
 #### Homework
 
-###### Names and ages
+##### Names and ages
 
 Get 10 names and their assoceated ages from the user, print to the screen: the oldest persion and their age.
 
-###### Hashtag triangle
+##### Hashtag triangle
 
 Get a height from the user and print a triangle (using hashtags) to the screen using that height as the number of hashtags on the bottom row. 
 
@@ -198,7 +198,7 @@ You may want to print the triangle the other way first, such as:
  ####
  #####
 </pre>
- would be for an input of 5. The challenge is doing it the first way, but doing it this way first may make it easier.
+ would be for an output for 5. The challenge is doing it the first way, but doing it this way first may make it easier.
  
 ### Class 4
 
@@ -207,6 +207,9 @@ You may want to print the triangle the other way first, such as:
 3. [Functions](#functions)
 4. [Homework](#Homework)
 	- [FizzBuzz](#fizzbuzz)
+	- [Caesar Cipher](#caesar-cipher)
+		- [Encription](#encription)
+		- [Decription](#decription)
 
 #### Reading
 
@@ -226,20 +229,80 @@ Write a program that prints the numbers from 1 to 100. But for multiples of thre
 
 It will be useful to understand the modulo operator, if statements, and looping.
 
+##### Caesar Cipher
+
+
+For this homework we will write a program for the [caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher). 
+
+###### Encription
+
+In the cipher, you will increment each letter by fixed amount (with wrapping so that 'z' + 1 = 'a').
+
+For example if the increment is 5 then 'abcde' becomes 'fghij', if the increment is 3 then 'wxyz' becomes 'zabc'
+
+###### Decription
+
+In this assignment you will print out all the possible values that our encripted value could be.
+
+For example if our encripted code is 'a' then that code could have come from the entire alphabet.
+
+'ab' could have come from 'ab','bc','cd','de', etc.
+
+For a slightly harder problem, try implemt an algorithm that does not have to check every possibility. 
+
+For example, if our encripted code is 'z lzm hr z gtlzm' then since we are dealing with the english language, we know that there are only a limited amount of one letter words, decreasing our possibilities to only handful.
+
 ### Class 5
 
 1. [Reading](#reading)
-2. [Tower of Hanoi](#tower-of-hanoi)
+2. [Recursion](#recursion)
 3. [Homework](#homework)
+	- [Tower of Hanoi](#tower-of-hanoi)
+	- [Vigenere Cipher](#vigenere-cipher) 
 
 #### Reading
 
 Skim through [this on exceptions](http://www.tutorialspoint.com/python/python_exceptions.htm)
 Read through [wiki on tower of hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi) as we will be using it a lot this class.
 
-#### Tower of Hanoi
+#### Recursion
+
+Recursion is the act of a function calling itself. A great example of this is the factorial function in mathematics.
+
+In mathematics, n! (pronounced n factorial) is written as n * (n-1)! where 0! = 1! = 1, so 
+5! = 5 * 4! = 5 * 4 * 3! = 5 * 4 * 3 * 2! = 5 * 4 * 3 * 2 * 1! = 5 * 4 * 2 * 1 = 120
+
+When we write recursive functions, we usually have a base case of when we should stop, and we want to move towards that base case on every interation of the function.
+
+If we wanted to write a function to compute a factorial, we would write:
+
+```python
+def factorial(n):
+	if n == 1: # our base case
+		return 1 # return 1 since 1! = 1
+	else:
+		return n * factorial(n - 1) # n! = n * (n-1)!
+```
+
+As we see here, we have a base case when we stop (when n = 1) and on each interation n gets closer to the base case, assuming the user enters a positive integer.
 
 #### Homework
+
+##### Tower of Hanoi
+
+In the tower of hanoi there are three towers with N rings on the first one (in ascending order). The goal of the game is to move all the rings to the middle tower. The rules are simple, you may only move one ring at a time and a ring can only be placed on a ring that is larger than itself.
+
+Open up the file for this class and play the game on your terminal/command line to get a feel for the game.
+
+Then try to implement solve, an algorithm that will win the game automatically for you.
+
+##### Vigenere Cipher
+
+In this cipher our key is not a single number, but rather a word or series of numbers. The code is encripted with by cycling through each letter of the code and key at the same time, using a mini caesar cypher on each letter.
+
+For example if our code is 'abc' and our key is '123' then 'a' gets shifted one place, 'b' two and 'c' three, so we get as an output 'bdf'. If our key is shorter than our code we just wrap around and start again. Again 'z' + 1 = 'a'.
+
+Decripting this algorithm is a bit harder, but not impossible. This problem is a bit more advanced and uses frequency analysis and can be implemented with machine learning.
 
 ### Class 6
 
