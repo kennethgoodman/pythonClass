@@ -3,6 +3,7 @@
 
 Will be used for sharing code and learning python
 
+
 ## An outline for the course
 
 1. [Class 1 ( Scratch and setting up python )](#class-1)
@@ -19,6 +20,8 @@ Will be used for sharing code and learning python
 10. [Class 10](#class-10)
 	* [Final Project](#final-project)
 	* [Alternate class on backtracking](#alternate-class-on-backtracking)
+11. [Python References](#python-references)
+12. [Text editors](#text-editors)
 
 ### Class 1
 1. [Scratch](#scratch)
@@ -111,9 +114,10 @@ Which if you have done everything correctly, should write to the screen: Hello W
 ### Class 2
 
 1. [Reading](#reading)
-2. [Variables, input and output](#variables-and-input-and-output)
+2. [Basics of programming](#basics-of-programming)
 	- [Variables](#variables)
 	- [Input and output](#input and output)
+	- [If statements](#if-statements)
 3. [Homework](#homework)
 
 #### Reading
@@ -131,8 +135,9 @@ When we say carefully, we really mean, try to really understand, the better you 
 Optional:
 [Math and numbers](http://www.tutorialspoint.com/python/python_numbers.htm)
 [Strings](http://www.tutorialspoint.com/python/python_strings.htm)
+[Boolean Logic](http://www.i-programmer.info/babbages-bag/235-logic-logic-everything-is-logic.html)
 
-#### variables and input and output
+#### Basics of programming
 
 ##### variables
 In python you can create a variable easily as long as you don't name it one of the keywords. You can read about them [here](http://zetcode.com/lang/python/keywords/).
@@ -151,18 +156,68 @@ To play around with this, open the interpreter (by typing python in your termina
 
 You may want to read [this](http://www.python-course.eu/input.php) before you continue.
 
+##### If statements
+If statements are a logical way to make decisions based on unknown input. We use if statements in our lives all the time. For example, we say "if I am late, leave without me", "If I don't catch the bus, I'll take a cab". 
+
+In programming we use if statements as a form of controlling the flow of the program. The sytanx is pretty straightforward, you can read about it [here](https://docs.python.org/2/tutorial/controlflow.html), only the first section is necessary.
+
+The syntax, taken from the docs:
+
+```python
+if x < 0:
+	x = 0
+	print 'Negative changed to zero'
+elif x == 0: #else if
+	print 'Zero'
+elif x == 1: #else if
+	print 'Single'
+else:
+	print 'More'
+```
+
+the if statement checks if x is less than zero, if it is it will set x to zero and print: 'Negative changed to zero', if it is not and if (else if) x is zero then print: 'Zero', if it is not and if x is 1, print: 'Single', else in all other cases, print: 'More'
+
 #### Homework
 
+Now that you know how to get input from the user, you will do some logic on the users input.
 
+You will do something like this
+
+```
+get name from user
+if initial of first name is between 'a' and 'm'
+	print("your first name starts at the beginning of the alphabet")
+else
+	print("Your first initial starts at the end of the alphabet")
+```
+
+You may use the helperfunctions file. There you can find the functions between(charA, charB) use like:
+
+```python
+'c' in between('a','d') # True
+'C' in between('a','d') # True even though it is capitalized
+'f' in between('a','d') # False
+```
+
+[This](#http://www.tutorialspoint.com/python/python_if_else.htm) reading from the reading section may come in handy.
 
 ### Class 3
+
+1. [Reading](#reading)
+2. [Loops](#loops)
+3. [Homework](#homework)
+	- [Names and ages](#names-and-ages)
+	- [Hashtag triangle](#hashtag-triangle)
+	
 #### Reading
 Read through [this on loops](http://www.tutorialspoint.com/python/python_loops.htm) carefully as well.
 Skim through [this on Lists](http://www.tutorialspoint.com/python/python_lists.htm).
 Skim through [this on tuples](http://www.tutorialspoint.com/python/python_tuples.htm).
 Skim through [this on python dictionaries](http://www.tutorialspoint.com/python/python_dictionary.htm)
-#### if logic
+Skim through [Control Flow Python](https://docs.python.org/2/tutorial/controlflow.html), as a general rule on this particular page, the closer the section is to the top of the page, the more important it is at this moment.
+
 #### loops
+
 #### Homework
 
 ##### Names and ages
@@ -395,3 +450,19 @@ magic methods: [rafekettler](http://www.rafekettler.com/magicmethods.html) or [p
 #### Final Project
 #### Sudoku
 #### Homework
+
+### Python References
+
+- [Code Like a Pythonista: Idiomatic Python](#http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
+- [Python documentation 3.5.1](#https://docs.python.org/3/)
+- [Python documentation 2.7.11](#https://docs.python.org/2.7/)
+- [tutorialspoint](#http://www.tutorialspoint.com/python/)
+- [Free Python Books](#https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#python)
+
+### Text editors and misc.
+
+- [Sublime Text](#http://www.sublimetext.com/)
+- [Vim](#http://www.vim.org/)
+	- [Vim Tutorial](#http://www.openvim.com/sandbox.html)
+- [Markdown](#https://daringfireball.net/projects/markdown/)
+	- [Markdown Cheatsheet](#https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
