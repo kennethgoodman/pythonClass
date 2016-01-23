@@ -5,23 +5,302 @@ Will be used for sharing code and learning python
 
 
 ## An outline for the course
-
-1. [Class 1 ( Scratch and setting up python )](#class-1)
-2. [Class 2 ( variables, input and output )](#class-2)
-3. [Class 3 ( if logic and loops )](#class-3)
-4. [Class 4 ( loops/functions and FizzBuzz )](#class-4)
-5. [Class 5 ( tower of hanoi )](#class-5)
-6. [Class 6](#class-6)
-	* [Fifteen](#fifteen)
-	* [Minesweeper](#minesweeper)
-7. [Class 7 ( sorting )](#class-7)
-8. [Class 8 ( data structures and intro to classes )](#class-8)
-9. [Class 9 ( classes continued )](#class-9)
-10. [Class 10](#class-10)
-	* [Final Project](#final-project)
-	* [Alternate class on backtracking](#alternate-class-on-backtracking)
-11. [Python References](#python-references)
-12. [Text editors and misc.](#text-editors-and-misc.)
+<div>
+	<div style="float: left; width: 50%">
+		<ol>
+			<li>
+				<a href="#class-1">Class 1</a>
+			</li>
+			<ol>
+				<li>
+					<a href="#scratch">Scratch</a>
+				</li>
+				<li>
+					<a href="#setting-up-python-and-package-managers">Setting up python</a>
+					<ul>
+						<li>
+							<a href="#nix-operating-systems-such-as-linux-unix-mac-osx">Linux, Unix or Mac OSX</a>
+						</li>
+						<li>
+							<a href="#windows">Windows</a>
+                        </li>
+					</ul>
+				</li>
+				<li>
+					<a href="#homework-class-1">Homework</a>
+				</li>
+				<li>
+					<a href="#text-editor">Text Editor</a>
+				</li>
+				<li>
+					<a href="#first-program">First Program</a>
+				</li>
+			</ol>
+			<li>
+				<a href="#class-2">Class 2</a>
+			</li>
+			<ol>
+				<li>
+					<a href="#reading-class-2">Reading</a>
+				</li>
+				<li>
+					<a href="#basics-of-programming">Basics of programming</a>
+					<ul>
+						<li>
+							<a href="#python">Python</a>
+						</li>
+						<li>
+							<a href="#variables">Variables</a>
+						</li>
+						<li>
+							<a href="input-and-output">Input and Output</a>
+						</li>
+						<li>
+							<a href="#if-statements">If Statements</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#homework-class-2">Homework</a>
+				</li>
+			</ol>	
+			<li>
+				<a href="#class-3">Class 3</a>
+			</li>
+			<ol>
+				<li>
+					<a href="#reading-class-3">Reading</a>
+				</li>
+				<li>
+					<a href="#looping">Looping</a>
+				</li>
+				<li>
+					<a href="#homework-class-3">Homework</a>
+					<ul>
+						<li>
+							<a href="#names-and-ages">Names and ages</a>
+						</li>
+						<li>
+							<a href="#hashtag-triangle">Hashtag triangle</a>
+						</li>
+					</ul>
+				</li>
+			</ol>
+			<li>
+				<a href="#class-4">Class 4</a>
+			</li>
+			<ol>
+				<li>
+					<a href="#reading-class-4">Reading</a>
+				</li>
+				<li>
+					<a href="#looping-continued">Looping continued</a>
+				</li>
+				<li>
+					<a href="#functions">Functions</a>
+				</li>
+				<li>
+					<a href="#homework-class-4">Homework</a>
+					<ul>
+						<li>
+							<a href=#fizzbuzz>FizzBuzz</a>
+						</li>
+						<li>
+							<a href="#caesar-cipher">Caesar Cipher</a>
+							<ul>
+								<li>
+									<a href="#encription">Encription</a>
+								</li>
+								<li>
+									<a href="#decription">Decription</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ol>
+			<li>
+				<a href="#class-5">Class 5</a>
+			</li>
+			<ol>
+				<li>
+					<a href="#reading-class-5">Reading</a>
+				</li>
+				<li>
+					<a href="#recursion">Recusion</a>
+				</li>
+				<li>
+					<a href="#lambdas">Lambdas</a>
+				</li>
+				<li>
+					<a href="#homework-class-5">Homework</a>
+					<ul>
+						<li>
+							<a href=#tower-of-hanoi>Tower of Hanoi</a>
+						</li>
+						<li>
+							<a href="#vigenere-cipher">Vigenere Cipher</a>
+						</li>
+					</ul>
+				</li>
+			</ol>
+			<li>
+				<a href="#class-6">Class 6</a>
+			</li>
+			<ol>
+				<li>
+					<a href="#reading-class-6">Reading</a>
+				</li>
+				<li>
+					<a href="#fifteen">Game of fifteen</a>
+				</li>
+				<li>
+					<a href="#minesweeper">Game of Minesweeper</a>
+				</li>
+				<li>
+					<a href="#homework-class-6">Homework</a>
+				</li>
+			</ol>
+		</ol>
+	</div>
+	<div style="float: right; width: 50%">
+		<ol start="7">
+			<li>
+				<a href="#class-7">Class 7</a>
+			</li>
+			<ol>
+				<li>
+					<a href="#reading-class-7">Reading</a>
+				</li>
+				<li>
+					<a href="#sorting">Sorting</a>
+					<ul>
+						<li>
+							<a href="#bubble-sort">Bubble Sort</a>
+						</li>
+						<li>
+							<a href="#merge-sort">Merge Sort</a>
+						</li>
+						<li>
+							<a href="#insertion-sort">Insertion Sort</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#big-o-notation">Big O Notation</a>
+				</li>
+				<li>
+					<a href="#homework-class-7">Homework</a>
+				</li>
+			</ol>
+			<li>
+				<a href="#class-8">Class 8</a>
+			</li>
+			<ol>
+				<li>
+					<a href="#reading-class-8">Reading</a>
+					<ul>
+						<li>
+							<a href="#data-structures-reading">Data Structures</a>
+						</li>
+						<li>
+							<a href="#reading-on-classes">Classes</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#data-structures">Data Structures</a>
+					<ul>
+						<li>
+							<a href="#hashing">Hashing</a>
+						</li>
+						<li>
+							<a href="#linked-lists">Linked Lists</a>
+						</li>
+						<li>
+							<a href="#trees">Trees</a>
+						</li>
+						<li>
+							<a href="#queues">Queues</a>
+						</li>
+						<li>
+							<a href="#stacks">Stacks</a>
+						</li>
+						<li>
+							<a href="#tuples">Tuples</a>
+						</li>
+						<li>
+							<a href="#heaps">Heaps</a>
+						</li>
+						<li>
+							<a href="#graphs">Graphs</a>
+						</li>
+						<li>
+							<a href="#mutability">Mutability</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#intro-to-classes">Intro to classes</a>
+				</li>
+				<li>
+					<a href="#homework-class-8">Homework</a>
+				</li>
+			</ol>
+			<li>
+				<a href="#class-9">Class 9</a>
+			</li>
+			<ol>
+				<li>
+					<a href="#reading-class-9">Reading</a>
+				</li>
+				<li>
+					<a href="#classes-continued">Classes Continued</a>
+					<ul>
+						<li>
+							<a href="#inheritance">Inheritance</a>
+						</li>
+						<li>
+							<a href="#polymorphism">Polymorphism</a>
+						</li>
+						<li>
+							<a href="#magic-methods">Magic Methods</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#homework-class-9">Homework</a>
+				</li>
+			</ol>
+			<li>
+				<a href="#class-10">Class 10</a>
+			</li>
+			<ol>
+				<li>
+					<a href="#reading-class-10">Reading</a>
+				</li>
+				<li>
+					<a href="#final-project">Final Project</a>
+				</li>
+				<li>
+					<a href="#sudoku">Game of Sudoku</a>
+				</li>
+				<li>
+					<a href="#homework-class-10">Homework</a>
+				</li>
+			</ol>
+			<li>
+				<a href="#python-references">Python References</a>
+			</li>
+			<li>
+				<a href="#text-editors-and-misc.">Text editors and misc.</a>
+			</li>
+		</ol>
+	</div>
+</div>
+<div>
+<br></br><br><br><br>
+</div>
 
 ### Class 1
 1. [Scratch](#scratch)
@@ -267,7 +546,7 @@ Skim through [this on tuples](http://www.tutorialspoint.com/python/python_tuples
 Skim through [this on python dictionaries](http://www.tutorialspoint.com/python/python_dictionary.htm)
 Skim through [Control Flow Python](https://docs.python.org/2/tutorial/controlflow.html), as a general rule on this particular page, the closer the section is to the top of the page, the more important it is at this moment.
 
-#### loops
+#### looping
 
 In programmaning, arguably the most important concept is looping. Looping alows the user to write a command one time and tell the computer to run it as many times as possible. For example, on your calender you may repeat an event every thursday, it would be extremely annoying and time consuming if you were to have to manually create the same event for thursday, rather telling the computer one time what your event is and then repeating it every thursday until a set date is fast and convienent.
 
@@ -359,7 +638,7 @@ Skim through [this on modules](http://www.tutorialspoint.com/python/python_modul
 
 Read the first answer [on the modulo operator here](http://stackoverflow.com/questions/4432208/how-does-work-in-python) and the syntax in python.
 
-#### Loops
+#### Looping continued
 
 Here we will dive a bit more into loops and their power. Just a quick refersher on the syntax:
 
@@ -728,11 +1007,14 @@ The homework for this class will be more of a self study then a project. Being a
 
 1. [Reading](#reading-class-10)
 2. [Classes Continued](#classes-continued)
+	- [Inheritance](#inheritance)
+	- [Polymorphism](#polymorphism)
+	- [Magic Methods](#magic-methods)
 3. [Homework](#homework-class-9)
 
 #### Reading Class 9
 #### Classes continued
-##### Ingeritance
+##### Inheritance
 ##### Polymorphism
 ##### Magic Methods
 #### Homework Class 9
@@ -755,10 +1037,13 @@ As an aside homework, you can and should start on the final project. There are v
 4. something with [sympy](http://www.sympy.org/en/index.html)
 5. [Monte Carlo Simulation](https://en.wikipedia.org/wiki/Monte_Carlo_method)
 6. [Greedy algorithms](https://en.wikipedia.org/wiki/Greedy_algorithm) for problems
-7. [Backtracking](https://en.wikipedia.org/wiki/Backtracking) (see sudoku)
-8. [8 Queens Puzzle](https://en.wikipedia.org/wiki/Eight_queens_puzzle)
+7. [Backtracking](https://en.wikipedia.org/wiki/Backtracking)
+	- [Sudoku Solver](#sudoku)
+	- [8 Queens Puzzle](https://en.wikipedia.org/wiki/Eight_queens_puzzle)
 
 #### Sudoku
+
+
 #### Homework Class 10
 
 ### Python References
