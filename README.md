@@ -115,6 +115,7 @@ Which if you have done everything correctly, should write to the screen: Hello W
 
 1. [Reading](#reading-class-2)
 2. [Basics of programming](#basics-of-programming)
+	- [Python](#python)
 	- [Variables](#variables)
 	- [Input and output](#input and output)
 	- [If statements](#if-statements)
@@ -139,8 +140,12 @@ Optional:
 
 #### Basics of programming
 
+##### Python
+
+Python is a beginner friendly language that has an english-like sytanx. In Python, the interpreter (the thing that will help the computer understand what you are typing) uses spaces or tabs to seperate commands and understand the flow of the program. In other many other languages semicolons and braces ( { } ) are used, or some mixture. You can use semicolons if you'd like, but generally it is not done. Try and stay close to general python coding practices so that others can understand your code better and you will be able to read theirs as well. As you program in Python you will get a better understanding of this.
+
 ##### variables
-In python you can create a variable easily as long as you don't name it one of the keywords. You can read about them [here](http://zetcode.com/lang/python/keywords/).
+In python you can create a variable easily as long as you don't name it one of the keywords. You can read about the [keywords here](http://zetcode.com/lang/python/keywords/).
 
 If you wanted to put a mathematical expression or a sentence or a mixed list you would do it like this:
 
@@ -154,11 +159,11 @@ To play around with this, open the interpreter (by typing python in your termina
 
 ##### input and output
 
-If we want to output what the user just gave us, we use 'print', it does not matter about the internals here at this point, for our sake lets use it as a function like so:
+If we want to output, we use 'print', it does not matter about the internals here at this point, for our sake lets use it as a function like so:
 
 ```python
 print("Hello World")
-```
+``` 
 
 You may want to skim through [this](http://www.python-course.eu/input.php) before you continue.
 
@@ -201,6 +206,28 @@ else:
 
 the if statement checks if x is less than zero, if it is it will set x to zero and print: 'Negative changed to zero', if it is not and if (else if) x is zero then print: 'Zero', if it is not and if x is 1, print: 'Single', else in all other cases, print: 'More'
 
+The inside of an if statement need not be a single command, it can be an if statement itself, for example:
+
+```python
+x = 25
+if x > 10:
+	if x > 30:
+		if x > 50:
+			print("x is really big")
+		else: # 30 < x < 50
+			print("x is prety big")
+	else: # 10 < x < 30
+		if x > 20: # 20 < x < 30
+			print("x is big")
+		else: 10 < x < 20
+			print("x is nicely sized")
+else: # x < 10
+	print("x is small")
+	
+```
+
+I agree there are better ways to write this, but this is just an example of how you can nest code for more complicated control flow.
+
 #### Homework Class 2
 
 Now that you know how to get input from the user, you will do some logic on the users input.
@@ -223,7 +250,7 @@ You may use the helperfunctions file. There you can find the functions between(c
 'f' in between('a','d') # False
 ```
 
-[This](#http://www.tutorialspoint.com/python/python_if_else.htm) reading from the reading section may come in handy.
+[This reading on if/else statements](http://www.tutorialspoint.com/python/python_if_else.htm) from the reading section may come in handy.
 
 ### Class 3
 
@@ -242,6 +269,40 @@ Skim through [Control Flow Python](https://docs.python.org/2/tutorial/controlflo
 
 #### loops
 
+In programmaning, arguably the most important concept is looping. Looping alows the user to write a command one time and tell the computer to run it as many times as possible. For example, on your calender you may repeat an event every thursday, it would be extremely annoying and time consuming if you were to have to manually create the same event for thursday, rather telling the computer one time what your event is and then repeating it every thursday until a set date is fast and convienent.
+
+In python there are two main ways to loop, for loops and while loops, you can read more about them [here](https://wiki.python.org/moin/ForLoop).
+
+A for loop usually has a set start and end, it is used generally when you know the amount of times you want the loop to run.
+
+A while loop is generally used when you are unsure the amount of times you need the loop to run. For example, you may want a loop to run every day until it rains, here you don't know the amount of days (times) you need it to run, just when to stop.
+
+The syntax is simple:
+
+for loop:
+
+```python
+
+''' program to output the numbers from 1 to 25 '''
+
+for x in range(1,26): # this runs from 1 through 26 (not including 26)
+	print(x) # on every iteration x will be set to the next number and then we print it
+	
+```
+
+while loop:
+
+```python
+
+''' An infinite loop program, this program will never stop, so if you try to run it, press control-c to stop your computer at some point. '''
+
+x = 1
+while True: # meaning run always
+	print("x is now " + str(x)) # print the current value of x, 
+	#need to put x in the str() function so that print understands it, don't worry about that for now 
+	x = x + 1 # increment x by 1
+	
+```
 #### Homework Class 3
 
 ##### Names and ages
@@ -299,7 +360,161 @@ Skim through [this on modules](http://www.tutorialspoint.com/python/python_modul
 Read the first answer [on the modulo operator here](http://stackoverflow.com/questions/4432208/how-does-work-in-python) and the syntax in python.
 
 #### Loops
+
+Here we will dive a bit more into loops and their power. Just a quick refersher on the syntax:
+
+```python
+for x in range(0,101):
+	print(x) # will print all numbers from 0 -> 100 (including 100)
+
+x = 0
+while True: # will run forever
+	print(x) 
+	x = x + 1
+```
+
+While loops have a similar syntax to if statements, but they will run again and again while the condition is true. So if we wanted to make a while loop work like a for loop it would be simple:
+
+```python
+
+x = 0
+while x < 101:
+	print(x)
+	x = x + 1
+```
+
+If we look at this, it will work exactly like the for loop above, the loop runs while x is less than 101, on each iteration x is incremented, just like the for loop, and it prints it. Try a couple out in the interpreter.
+
+Just like if statements, loops can also be nested:
+
+```python
+for x in range(1,11):
+	print(x)
+
+for x in range(1,11):
+	for y in range(1,11):
+		print(str(x) + " * " + str(y) + " = " + str(x*y))
+```
+
+You don't even have to have static nested loops, you can make them a bit more dynamic:
+
+```python
+
+for x in range(1,11):
+	for y in range(x,11): #start from x and go to 10 (inclusive)
+		print(str(x) + " * " + str(y) + " = " + str(x*y))
+
+```
+
+If you'd like to break out of a loop you would you the "break" keyword:
+
+```python
+
+for x in range(1,10000000):
+	print(x)
+	if x == 10:
+		break
+
+ # or you can use it in a while loop
+x = 10
+while True:
+	print(x)
+	x = x + 1
+	if x > 25:
+		break
+```
+
+Try these out and play around with it to get a better feel.
+
+The last thing we will do is iterable collections
+
+if we have a list we can loop through it as well:
+
+```python
+
+listOfItems = [1,2,3,4, "I like coding", "coding is fun", "yay"]
+for item in listOfItems:
+	print(item)
+```
+
+As an exercise try to create a list of lists and iterate through every element and print them all.
+ 
 #### Functions 
+
+Functions in programming allow you to write a piece of code once and use it many times. I'm sure you have seen functions before in your math classes, such as sin,cos,tan, ln, log, etc. Even if you havn't dont worry, the concept isn't hard.
+
+Lets create a simple function, one that calculates the number that is bigger, given two numbers.
+
+We would take two numbers in and will return to the user the larger number.
+
+```python
+def largerNumber(firstNumber, secondNumber):
+	if firstNumber > secondNumber:
+		return firstNumber
+	elif secondNumber > firstNumber:
+		return secondNumber
+	else: #they are equal
+		return firstNumber #does not matter since they are equal
+```
+
+In python you use the "def" keyword to let the intrepreter know that you are "def"-ining a function, you then name it (we named it largerNumber), then you open the parenthesis to allow arguements for the functions, the rest we have seen before.
+
+To use it, just call it like other functions we have seen:
+
+```python
+
+print(largerNumber(5,10)) # will print 10
+
+```
+
+Let's rewrite some of our previous code in a function so that we can re-use it. Let's print the numbers from 1 through the users input:
+
+```python
+
+def print_from_one_to_the_number(n):
+	for x in range(1,n+1):
+		print(x)
+		
+print_from_one_to_the_number(20)
+print_from_one_to_the_number(30)
+print_from_one_to_the_number(40)
+```
+
+Here we define a function that takes an argument that we use in our for loop, so that our loop is dynamic. Now every time we want to print out the numbers from 1 -> n, just use this one line call.
+
+Now lets do something a bit more useful, lets start computing, lets sum the numbers from 1 -> 100
+
+```python
+sum = 0
+for x in range(1,101):
+	sum = sum + x # on each iteration x will change to the next number, we add it to the current sum
+print(sum)
+```
+
+Now if we functionize it, we can sum the numbers from 1 -> n
+
+```python
+def sum_from_one_to_n(n):
+	sum = 0
+	for x in range(1,n+1):
+		sum = sum + x
+	return sum
+```
+
+Now if we want to sum from a -> b:
+
+```python
+def sum_from_a_to_b(a,b):
+	sum = 0
+	for x in range(a,b+1):
+		sum = sum + x
+	return sum
+```
+
+Now that was easy, we know have a function that will sum any amount of numbers, starting from anyplace.
+
+As an exercise, try and write a function that sums all the squares (x*x) from a -> b
+
 #### Homework Class 4
 
 ##### FizzBuzz
@@ -335,7 +550,8 @@ For example, if our encripted code is 'z lzm hr z gtlzm' then since we are deali
 
 1. [Reading](#reading-class-5)
 2. [Recursion](#recursion)
-3. [Homework](#homework-class-5)
+3. [Lambdas](#Lambdas)
+4. [Homework](#homework-class-5)
 	- [Tower of Hanoi](#tower-of-hanoi)
 	- [Vigenere Cipher](#vigenere-cipher) 
 
@@ -365,6 +581,34 @@ def factorial(n):
 
 As we see here, we have a base case when we stop (when n = 1) and on each interation n gets closer to the base case, assuming the user enters a positive integer.
 
+#### Lambdas
+
+Lambdas are anonymous functions, or functions that dont have names, they are used when you want to write short one line functions.
+
+To see the usefulness of this, we will expand the concept of arguements in functions, and maybe you've realized this already, but functions can take functions as arguements. Lets look at an example where this would be usefule:
+
+```python
+
+def square(x):
+	return x*x
+def cube(x):
+	return x*x*x
+def sum_from_a_to_b(a,b,function):
+	sum = 0
+	for x in range(a,b+1):
+		sum = sum + function(x)
+ #now lets use it
+print( sum_from_a_to_b(1,10,square) ) # will print the sum of the squares
+print( sum_from_a_to_b(1,10,cube) )   # will print the sum of the cubes
+```
+
+Now what if we dont want to create a new function like cube that we will only use once, well we can just use a lambda:
+
+```python
+
+print(sum_from_a_to_b(1,10, lambda x: x*x*x) ) #will print the sum of the cubes
+
+```
 #### Homework Class 5
 
 ##### Tower of Hanoi
