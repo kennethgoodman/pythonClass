@@ -36,12 +36,34 @@ def win(board):
 				return False
 	return True #if it got this far, it's a win
 def randomStart():
+	# the problem here is that many permutations just are not solveable
+
 	a = [i for i in range(1,16)]
 	a.append("_")
 	import random
 	return [[a.pop(random.randrange(len(a))) for i in range(4)] for j in range(4)]
         # return a 2d array with a random element from a inside it, pop after inserting
-#printBoard(randomStart())
+def randomStartSolveable(moveTimes = 1000):
+	board = createBoard()
+	row = column = 3 # starting place for empty space
+       # row and column keep track of the empty space
+	possibleMoves = { #four possible directions
+		'w': {'x':0, 'y':-1},
+		'a': {'x':-1,'y':0},
+		's': {'x':0, 'y':1},
+		'd': {'x':1, 'y':0},
+	}
+	import random
+	for x in range(moveTimes):
+		try:
+			currentMove = possibleMoves[random.choice(['w','a','s','d'])]
+			move(board,row,column, currentMove['x'], currentMove['y'])
+            #move the empty square
+			row += currentMove['y'] 
+			column += currentMove['x']
+		except NameError as e: # if we happen to pick an illegall move
+			pass
+	return board
 def playFifteen():
 	board = createBoard()
 	printBoard(board)
@@ -68,4 +90,14 @@ def playFifteen():
 		if(win(board)): #game is won
 			playingGame = False #will end loop
 			print("You won!")
-playFifteen()
+def findEmptySpace(board):
+	for x in range(3):
+		for y in range(3):
+			if board[x][y] == "_":
+				return (x,y)
+def moveToSpecificSpot(board,from, to): #where from,to are tuples with x,y cordinates
+	column, row = findEmptySpace(board)
+	
+
+#playFifteen()
+printBoard(randomStartSolveable())

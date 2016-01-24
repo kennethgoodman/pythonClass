@@ -188,7 +188,25 @@ Will be used for sharing code and learning python
 				</li>
 				<li>
 					<a href="#big-o-notation">Big O Notation</a>
+					<ul>
+						<li>
+							<a href="#upper-bounds-on-mathematical-functions">Upper bounds on mathematical functions</a>
+						</li>
+						<li>
+							<a href="#finding-big-o-in-a-program">Finding Big O in a program</a>
+						</li>
+					</ul>
 				</li>
+				<li>
+					<a href="#searching">Searching</a>
+					<ul>
+						<li>
+							<a href="#linear-search">Linear Search</a>
+						</li>
+						<li>
+							<a href="#binary-search">Binary Search</a>
+						</li>
+					</ul>
 				<li>
 					<a href="#homework-class-7">Homework</a>
 				</li>
@@ -912,14 +930,20 @@ Decripting this algorithm is a bit harder, but not impossible. This problem is a
 4. [Homework](#homework-class-6)
 
 #### Reading Class 6
+
 Play [this](http://migo.sixbit.org/puzzles/fifteen/) game, and get ready to build it.
-Read up on [this](https://en.wikipedia.org/wiki/Microsoft_Minesweeper) classic game, get ready to build a similar version as well.
+
+Read up on [this](https://en.wikipedia.org/wiki/Microsoft_Minesweeper) classic game and get ready to build a similar version as well.
 
 #### Fifteen
+
+The game of fifteen is an easy one to understand and a bit harder to solve. This week we will implement the game on the console and if your ambitious, I urge you to try to come up with a computer algorithm that will solve the board. Be careful though, many permutations are impossible to solve.
 
 #### Minesweeper
 
 #### Homework Class 6
+
+
 
 ### Class 7
 
@@ -929,7 +953,12 @@ Read up on [this](https://en.wikipedia.org/wiki/Microsoft_Minesweeper) classic g
 	- [Merge Sort](#merge-sort)
 	- [Insertion sort](#insertion-sort)
 3. [Big O Notation](#big-o-notation)
-4. [Homework](#homework-class-7)
+	- [Upper bounds on mathematical functions](#upper-bounds-on-mathematical-functions)
+	- [Finding Big O in a program](#finding-big-o-in-a-program)
+4. [Searching](#searching)
+	- [Linear Search](#linear-search)
+	- [Binary Search](#binary-search)
+5. [Homework](#homework-class-7)
 	
 #### Reading Class 7
 Read through these sorting alogrithms: 
@@ -939,14 +968,74 @@ Read through these sorting alogrithms:
 
 #### Sorting
 
+Trying to implement these three sorting algorithms yourself would be beneficial. I did not pick these three for any particular reason, there are numerious sorting algorithms, these just happen to be the ones I picked. I encourage you to find algorithms you find easy to understand and even more so, hard to understand, and implement them yourself in Python.
+
 ##### Bubble sort
-You can watch a clip [here](https://www.youtube.com/watch?v=Ui97-_n5xjo) explaining bubble sort.
+You can watch a clip [here](https://www.youtube.com/watch?v=Ui97-_n5xjo) explaining bubble sort. If you look in the class file, three version have been implemented for bubble sort, it would help to look at them and try to understand what is happening.
+
 ##### Merge sort
 You can watch a clip [here](https://www.youtube.com/watch?v=sWtYJv_YXbo) explaining Merge sort.
+
 ##### Insertion sort
 You can watch a clip [here](https://www.youtube.com/watch?v=TwGb6ohsvUU) explaining Insertion sort.
 
 #### Big O Notation
+
+Of the bound notation, Big O is arguably the most important. [Big O](https://en.wikipedia.org/wiki/Big_O_notation) is way to characterize a function and give it an upper bound. This part may get too mathematical for some, so feel free to skim through it, there is no reason to let it slow you down at this point. I do suggest coming back to it at some point as it is asked many interviews. You can skip [here](#finding-big-o-in-a-program) to skip the more mathy part.
+
+###### Upper bounds on mathematical functions
+
+To find an upper bound on a mathematical function you are tring to find the highest value it will reach, given a set of inputs. This can be easy for certain functions and hard for others. For example, given the function: f(x) = x, well we can see that this function is always as big as the input it is given. So we write that this function is O(n), read as: big oh of n, or sometimes just: oh of n. Other functions are a bit tricker, and we won't boggle ourselves down with the nitty gritty details, the internet is full of exercises.
+
+One of the more important rules is: O(f(x)) + O(g(x)) = O(max(f,g)). For example, if f(x) = x, and g(x) = x^2, then since g > f for x > 1, then O(f(x)) + O(g(x)) = O(max(f,g)) = O(g(x)) = O(x^2)
+
+If your unsure which function will be larger at points, then you need to do some calculus and limits, but this is a bit more advanced then what we will be dealing with.
+
+###### Finding Big O in a program
+
+Lets look at a couple examples. If we want to find an element in an unsorted list what is the big O? [linear search](#linear-search)
+
+Well, how many operations would we have to do? The answer obviously depends on the size of the list. 
+
+We can ask ourselves, in the worst case scenario, what is the largest number of elements in the list we would have to check? Well if the item is not in the list, we would have to check every element, which would O(length of list) or usually written O(n) where n is the size of the input.
+
+What if our list is sorted. Well then it becomes a bit easier, what we do is start at the half way point, if the middle item is larger than the item, then we research the list but only search the first half of the list, otherwise we search the second half of the list. (unless of course we found the item). Well how many searches does this take? In the worst case, the item is not in the list, and we keep halfing until there is only one element left. So the answer to our question is the answer to this question: How many times can we half a number. If you remember from Trigonometry/Algebra 2 the answer is log base 2. Since computers are binary by nature, we use base 2 as our implied base, so we write O(log(n)), read as: "oh of log n". Don't worry if you didn't fully get it, most people don't use big O notation on the regular, but it is a concept you should be somewhat familar with.
+
+Now that we've discussed them, lets code the two examples up:
+
+#### Searching
+
+##### Linear Search
+
+Linear Search is search through a collection of items, one at a time.
+
+```python
+def linearSearch(listOfItems,item_to_search_for):
+	for item in listOfItems:
+		if item == item_to_search_for
+			return True # we found it
+	return False # if we got this far, that means we never returned true, that means it is not in the list
+```
+
+##### Binary Search
+
+Binary Search only works on sorted lists. This one will be a specific solution to a integer only list, but you can make a more abstract generalization to the binary search algorithm when we talk more about classes.
+
+```python
+def binarySearch(listOfNumbers,number):
+	length = len(listOfNumbers) # get the length of the list
+	if listOfNumbers[length//2] == number: # if the middle element is the one we are looking for, return true 
+		return True
+	if length == 1: # if there is only one item in the list and its not the one we are looking for 
+					# (otherwise we would have returned true one line before this) then return false
+		return False
+	elif listOfNumbers[length/2] > number: # if the middle element is greater than our number
+		return binarySearch(listOfNumbers[:length//2], number) # research but only use the first half of the list
+	else: # if its less than number
+		return binarySearch(listOfNumbers[length//2:], number) # research but only use the second half of the list
+```
+
+You can look and play around with the class file on Binary Search to get a feel for it.
 
 #### Homework Class 7
 
