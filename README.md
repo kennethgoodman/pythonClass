@@ -438,6 +438,8 @@ Optional:
 
 Python is a beginner friendly language that has an english-like sytanx. In Python, the interpreter (the thing that will help the computer understand what you are typing) uses spaces or tabs to seperate commands and understand the flow of the program. In other many other languages semicolons and braces ( { } ) are used, or some mixture. You can use semicolons if you'd like, but generally it is not done. Try and stay close to general python coding practices so that others can understand your code better and you will be able to read theirs as well. As you program in Python you will get a better understanding of this.
 
+To understand some of the work that is done here, I write "#" after code sometimes, there are comments. They are english and ignored by the computer. Read them as an english commenter for the line of code or the code your about to read or just read. 
+
 ##### variables
 In python you can create a variable easily as long as you don't name it one of the keywords. You can read about the [keywords here](http://zetcode.com/lang/python/keywords/).
 
@@ -488,19 +490,20 @@ The syntax, taken from the docs:
 
 ```python
 if x < 0:
-	x = 0
-	print 'Negative changed to zero'
+	print('x is negative')
 elif x == 0: #else if
-	print 'Zero'
+	print('x is zero')
 elif x == 1: #else if
-	print 'Single'
+	print('x is one')
 else:
-	print 'More'
+	print('x is positive and not one') # not less than zero, not zero and not one
 ```
 
-the if statement checks if x is less than zero, if it is it will set x to zero and print: 'Negative changed to zero', if it is not and if (else if) x is zero then print: 'Zero', if it is not and if x is 1, print: 'Single', else in all other cases, print: 'More'
+the if statement checks if x is less than zero, if it is it will print: 'x is negative', if it is not and if (else if) x is zero then print: 'x is zero', if it is not and if x is 1, print: 'x is one', else in all other cases, print: 'x is positive and not one'
 
-The inside of an if statement need not be a single command, it can be an if statement itself, for example:
+This next example is going to be a bit confusing, I do this, not to confuse you on purpose, but to try and drive home a point.
+
+The inside of an if statement need not be a single command, it can be an if statement itself, in fact it can be any number statements, for example:
 
 ```python
 x = 25
@@ -517,19 +520,53 @@ if x > 10:
 			print("x is nicely sized")
 else: # x < 10
 	print("x is small")
-	
 ```
 
 I agree there are better ways to write this, but this is just an example of how you can nest code for more complicated control flow.
+
+The last thing we will do with if statements, is boolean logic. In python if you want to test for multiple conditions in an if statement, you can use keywords like `and` or `or`. They are very useful and can make reading code really easy.
+
+```python
+x = 25
+
+if 10 <= x and x <= 50: # <= means: less than or equal, similar >= would mean: more than or equal
+	print("x is in the middle")
+ # another example:
+ 
+if x < 10 or x > 50:
+	print("x is not in the middle")
+```
+
+A neat cool trick that you can do in python is some regular mathematical inequalities:
+
+```python
+x = 25
+
+if 20 <= x < 30:
+	print("x is in the twenties")
+
+```
+
+As a side note, `!=` means not equal.
 
 #### Homework Class 2
 
 Now that you know how to get input from the user, you will do some logic on the users input.
 
-You will do something like this
+1. ask the user for their name
+	- if they give you name that does not have at least 3 charachters or more than 20, ask one more time.
+		- if again they do not give you a good name, don't do anything more, you may use `exit()`
+2. If the initial of their first name is before m or m, then tell them "your first name starts at the beginning of the alphabet"
+3. Otherwise tell the user "Your first initial starts at the end of the alphabet"
+
+Here is some pseudocode to help with your first coding homework:
 
 ```
 get name from user
+if its less than 3 letters or longer than 20
+	get name from user
+	if name is still less than 3 letters or longer than 20
+		exit
 if initial of first name is between 'a' and 'm'
 	print("your first name starts at the beginning of the alphabet")
 else
@@ -543,6 +580,22 @@ You may use the helperfunctions file. There you can find the functions between(c
 'C' in between('a','d') # True even though it is capitalized
 'f' in between('a','d') # False
 ```
+
+To include the between function in your code, on the top of your code write:
+
+```python
+from helperFunctions import *
+```
+
+the "*" is a wildcard, like a joker in cards, it tells the computer, I want anything and everything. It is generally better to name the functions you are looking for, this way when you reread your code (or someone reads yours), it will be known why that file/library/module was called in, but for our sake, this is enough. At this stage it is not important for us to delve into the functions that were prepared.
+
+If you would like to do it:
+
+```python
+from helperFunctions import between
+```
+
+You may see this done differently online or in other examples, we will talk about importing later as well.
 
 [This reading on if/else statements](http://www.tutorialspoint.com/python/python_if_else.htm) from the reading section may come in handy.
 
@@ -624,7 +677,7 @@ If the user enters 5, the output should be:
 </pre>
 and so on.
 
-You may want to print the triangle the other way first, such as:
+Hint: You may want to print the triangle without spaces first. For example, an input of 5 would output:
 <pre>
  #
  ##
@@ -632,7 +685,7 @@ You may want to print the triangle the other way first, such as:
  ####
  #####
 </pre>
- would be for an output for 5. The challenge is doing it the first way, but doing it this way first may make it easier.
+ Once you do this, add the spaces in to finish the project.
  
 ### Class 4
 
@@ -779,10 +832,10 @@ Here we define a function that takes an argument that we use in our for loop, so
 Now lets do something a bit more useful, lets start computing, lets sum the numbers from 1 -> 100
 
 ```python
-sum = 0
+currentSum = 0
 for x in range(1,101):
-	sum = sum + x # on each iteration x will change to the next number, we add it to the current sum
-print(sum)
+	currentSum = currentSum + x # on each iteration x will change to the next number, we add it to the current sum
+print(currentSum)
 ```
 
 Now if we functionize it, we can sum the numbers from 1 -> n
@@ -970,6 +1023,8 @@ Read through these sorting alogrithms:
 
 Trying to implement these three sorting algorithms yourself would be beneficial. I did not pick these three for any particular reason, there are numerious sorting algorithms, these just happen to be the ones I picked. I encourage you to find algorithms you find easy to understand and even more so, hard to understand, and implement them yourself in Python.
 
+A good place to look would also be [here](http://www.sorting-algorithms.com)
+
 ##### Bubble sort
 You can watch a clip [here](https://www.youtube.com/watch?v=Ui97-_n5xjo) explaining bubble sort. If you look in the class file, three version have been implemented for bubble sort, it would help to look at them and try to understand what is happening.
 
@@ -1126,7 +1181,8 @@ As an aside homework, you can and should start on the final project. There are v
 7. [Backtracking](https://en.wikipedia.org/wiki/Backtracking)
 	- [Sudoku Solver](#sudoku)
 	- [8 Queens Puzzle](https://en.wikipedia.org/wiki/Eight_queens_puzzle)
-
+8. Solve the game of fifteen [or any n^2 - 1 game](http://larc.unt.edu/ian/pubs/saml.pdf) or compliment with [A*](https://en.wikipedia.org/wiki/A*_search_algorithm)
+9. [Dijkstra's Algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) and [Enhanced Iterative-Deepening Search*](http://webdocs.cs.ualberta.ca/~tony/RecentPapers/pami94.pdf)
 #### Sudoku
 
 
