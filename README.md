@@ -50,6 +50,9 @@ Will be used for sharing code and learning python
 							<a href="#python">Python</a>
 						</li>
 						<li>
+							<a href="#types">Types</a>
+						</li>
+						<li>
 							<a href="#variables">Variables</a>
 						</li>
 						<li>
@@ -375,6 +378,8 @@ Sublime text is a great editor that uses colors and auto complete to make coding
 
 ##### First program
 
+If you have trouble or want another look, here is a [tutorial](https://en.wikibooks.org/wiki/Python_Programming/Creating_Python_Programs). Otherwise just continue.
+
 After you download sublime (or you can use any text editor) open a new file and save it as: helloworld.py in the documents
 
 On the first line write:
@@ -410,6 +415,7 @@ Which if you have done everything correctly, should write to the screen: Hello W
 1. [Reading](#reading-class-2)
 2. [Basics of programming](#basics-of-programming)
 	- [Python](#python)
+	- [Types](#types)
 	- [Variables](#variables)
 	- [Input and output](#input and output)
 	- [If statements](#if-statements)
@@ -428,20 +434,28 @@ Read through [this on decision making](http://www.tutorialspoint.com/python/pyth
 When we say carefully, we really mean, try to really understand, the better you understand what is going on, the better you will code, and the less you will debug later.
 
 Optional:
-[Math and numbers](http://www.tutorialspoint.com/python/python_numbers.htm)
-[Strings](http://www.tutorialspoint.com/python/python_strings.htm)
-[Boolean Logic](http://www.i-programmer.info/babbages-bag/235-logic-logic-everything-is-logic.html)
+[Math and numbers](http://www.tutorialspoint.com/python/python_numbers.htm),
+[Strings](http://www.tutorialspoint.com/python/python_strings.htm),
+[Boolean Logic](http://www.i-programmer.info/babbages-bag/235-logic-logic-everything-is-logic.html),
 
 #### Basics of programming
 
 ##### Python
 
+To understand some of the work that is done here, I write "#" after code sometimes, these are comments. They are english and ignored by the computer. Read them as an english commenter for the line of code or the code your about to read or just read. Try it out in the interpreter.
+
+You can skip this paragraph if you don't want some nitty gritty details, but it is advice to come back at point. As a side note on the difference between python 2.7 or less and python 3 and greater: There are small differences between the versions that will slightly be mentioned throughout the course, it should not matter what version you use at this point. On Mac computers, python 2.7 comes preinstalled (at the time of this writing), so it may be easier to stick with 2.7 for now. In the future you may want to port over to 3.x. On windows, if you downloaded 3.x then you will want to use that versions documentation. The differences will not always effect you, but come important in a couple places. The main differences in the begginning parts of the course are the `print` and `input` commands/functions. In 2.7 and below `print` is a keyword and in 3+ it is a function meaning if you want to print you do: `print 5 # < 2.7` and `print(5) # 3+`. If you do it with parenthesis in 2.7 it will still work, so I advise you get into practice of using parenthesis for when you port your programs in the future. I mention inputting later. Another difference is the division operator, we will talk about that later.
+
+To start running the python [interpreter](<https://en.wikipedia.org/wiki/Interpreter_(computing)>) Open either the command line (on windows) or the terminal (on *nix systems such as Mac, Linux, Unix, etc.) and just type `python`. Play around with some math `5 + 5`, `4.0/3`, `4*4` (some weird things may happen if you do division based on your version, so don't freak out).
+
 Python is a beginner friendly language that has an english-like sytanx. In Python, the interpreter (the thing that will help the computer understand what you are typing) uses spaces or tabs to seperate commands and understand the flow of the program. In other many other languages semicolons and braces ( { } ) are used, or some mixture. You can use semicolons if you'd like, but generally it is not done. Try and stay close to general python coding practices so that others can understand your code better and you will be able to read theirs as well. As you program in Python you will get a better understanding of this.
 
-To understand some of the work that is done here, I write "#" after code sometimes, there are comments. They are english and ignored by the computer. Read them as an english commenter for the line of code or the code your about to read or just read. 
+##### Types
 
-##### variables
-In python you can create a variable easily as long as you don't name it one of the keywords. You can read about the [keywords here](http://zetcode.com/lang/python/keywords/).
+Reading [this on variable types](http://www.tutorialspoint.com/python/python_variable_types.htm) is enough for types now, and I highly suggest that you understand this page. It is essential that variables types are understood for the rest of the course. These will be the tools you use to solve problems. This is one of the only readings I will advise you to go through compleately. Don't worry if you don't understand all of it.
+
+##### Variables
+In python you can create a variable easily as long as you don't name it one of the keywords. You can read about the [keywords here](http://zetcode.com/lang/python/keywords/). A variable does not need to mean anything, it can be compleately arbitrary, the computer does understand. I suggest that you use variable names that mean something to you and can be easily infered what they contain from an outside reader (or you when you read your code in the future).
 
 If you wanted to put a mathematical expression or a sentence or a mixed list you would do it like this:
 
@@ -449,11 +463,15 @@ If you wanted to put a mathematical expression or a sentence or a mixed list you
 x = 5 + 12 + 24 + 36
 sentence = "I love coding in python"
 mixedList = [5 + 23, 0, "Coding is fun", 10.5, "Hello world!"]
+
+this_Is_A_Variable_That_Will_Contain_a_number = 5
+number = 10
 ```
+Python is case sensitive, so `x` and `X` are different as well as `variableName` and `variablename`
 
 To play around with this, open the interpreter (by typing python in your terminal/command line or using an online one [here](https://www.pythonanywhere.com/try-ipython/)) and try it out.
 
-##### input and output
+##### Input and output
 
 If we want to output, we use 'print', it does not matter about the internals here at this point, for our sake lets use it as a function like so:
 
@@ -573,7 +591,7 @@ else
 	print("Your first initial starts at the end of the alphabet")
 ```
 
-You may use the helperfunctions file. There you can find the functions between(charA, charB) use like:
+You may and should use the helperfunctions file. There you can find the functions between(charA, charB) use like:
 
 ```python
 'c' in between('a','d') # True
@@ -581,7 +599,7 @@ You may use the helperfunctions file. There you can find the functions between(c
 'f' in between('a','d') # False
 ```
 
-To include the between function in your code, on the top of your code write:
+To include the between function in your code, download the class file and place it in the same directory as the one you are writing the homework's answer in. Then on the top of your code write:
 
 ```python
 from helperFunctions import *
@@ -599,6 +617,8 @@ You may see this done differently online or in other examples, we will talk abou
 
 [This reading on if/else statements](http://www.tutorialspoint.com/python/python_if_else.htm) from the reading section may come in handy.
 
+If you are having trouble with importing, you can just copy and paste the code on top of your file and then use the function explicitly without importing.
+
 ### Class 3
 
 1. [Reading](#reading-class-3)
@@ -612,11 +632,11 @@ Read through [this on loops](http://www.tutorialspoint.com/python/python_loops.h
 Skim through [this on Lists](http://www.tutorialspoint.com/python/python_lists.htm).
 Skim through [this on tuples](http://www.tutorialspoint.com/python/python_tuples.htm).
 Skim through [this on python dictionaries](http://www.tutorialspoint.com/python/python_dictionary.htm)
-Skim through [Control Flow Python](https://docs.python.org/2/tutorial/controlflow.html), as a general rule on this particular page, the closer the section is to the top of the page, the more important it is at this moment.
+Skim through [Control Flow Python](https://docs.python.org/2/tutorial/controlflow.html), as a general rule on this particular link, the closer the section is to the top of the page, the more important it is at this moment.
 
 #### looping
 
-In programmaning, arguably the most important concept is looping. Looping alows the user to write a command one time and tell the computer to run it as many times as possible. For example, on your calender you may repeat an event every thursday, it would be extremely annoying and time consuming if you were to have to manually create the same event for thursday, rather telling the computer one time what your event is and then repeating it every thursday until a set date is fast and convienent.
+In programmaning, arguably the most important concept is looping. Looping alows the user to write a command one time and tell the computer to run it as many times as you'd like. For example, on your calender you may repeat an event every thursday, it would be extremely annoying and time consuming if you had to manually create the same event for every thursday, rather telling the computer one time what your event is and then repeating it every thursday until a set date. This was is fast and convienent.
 
 In python there are two main ways to loop, for loops and while loops, you can read more about them [here](https://wiki.python.org/moin/ForLoop).
 
@@ -630,12 +650,14 @@ for loop:
 
 ```python
 
-''' program to output the numbers from 1 to 25 '''
+''' program to output the numbers from 1 to 25 ''' # three quotes is also another form of comments
 
 for x in range(1,26): # this runs from 1 through 26 (not including 26)
 	print(x) # on every iteration x will be set to the next number and then we print it
 	
 ```
+
+Try this out on your interpreter.
 
 while loop:
 
@@ -655,6 +677,8 @@ while True: # meaning run always
 ##### Names and ages
 
 Get 10 names and their assoceated ages from the user, print to the screen: the oldest persion and their age.
+
+It is up to you to choose how the user will know what to type and how you store the data. 
 
 ##### Hashtag triangle
 
@@ -740,7 +764,7 @@ for x in range(1,11):
 
 for x in range(1,11):
 	for y in range(1,11):
-		print(str(x) + " * " + str(y) + " = " + str(x*y))
+		print(str(x) + " * " + str(y) + " = " + str(x*y)) # the str() function turns an object/variable into a string for the print function
 ```
 
 You don't even have to have static nested loops, you can make them a bit more dynamic:
@@ -773,6 +797,19 @@ while True:
 
 Try these out and play around with it to get a better feel.
 
+the `break` keyword only breaks out of loop it currently is in, so a nested loop will not be compleately broken out of, for example
+
+```python
+
+for x in range(1,11):
+	for y in range(1,11):
+		if y > 5:
+			break
+		else:
+			print(str(x) + " * " + str(y) + " = " + str(x*y))
+
+```
+
 The last thing we will do is iterable collections
 
 if we have a list we can loop through it as well:
@@ -804,7 +841,7 @@ def largerNumber(firstNumber, secondNumber):
 		return firstNumber #does not matter since they are equal
 ```
 
-In python you use the "def" keyword to let the intrepreter know that you are "def"-ining a function, you then name it (we named it largerNumber), then you open the parenthesis to allow arguements for the functions, the rest we have seen before.
+In python you use the `def` keyword to let the intrepreter know that you are "def"-ining a function, you then name it (we named it largerNumber), then you open the parenthesis to allow arguements for the functions, the rest we have seen before. Again, function names need not mean anything, but it is good practice to name them something that explains what the function will do.
 
 To use it, just call it like other functions we have seen:
 
@@ -833,8 +870,10 @@ Now lets do something a bit more useful, lets start computing, lets sum the numb
 
 ```python
 currentSum = 0
+
 for x in range(1,101):
 	currentSum = currentSum + x # on each iteration x will change to the next number, we add it to the current sum
+
 print(currentSum)
 ```
 
@@ -858,11 +897,13 @@ def sum_from_a_to_b(a,b):
 	return currentSum
 ```
 
-Now that was easy, we know have a function that will sum any amount of numbers, starting from anyplace.
+Now that was easy, we know have a function that will sum any amount of numbers, starting from any place.
 
-As an exercise, try and write a function that sums all the squares (x*x) from a -> b
+As an exercise, try and write a function that sums all the squares (`x * x`) from a -> b
 
 #### Homework Class 4
+
+This homework may be a bit more difficult than the previous two, don't sweat it, work through them and you will become a better programmer for it.
 
 ##### FizzBuzz
 
@@ -889,7 +930,7 @@ For example if our encripted code is 'a' then that code could have come from the
 
 'ab' could have come from 'ab','bc','cd','de', etc.
 
-For a slightly harder problem, try implemt an algorithm that does not have to check every possibility. 
+For a slightly harder problem, try to implement an algorithm that does not have to check every possibility. 
 
 For example, if our encripted code is 'z lzm hr z gtlzm' then since we are dealing with the english language, we know that there are only a limited amount of one letter words, decreasing our possibilities to only handful.
 
@@ -928,6 +969,40 @@ def factorial(n):
 
 As we see here, we have a base case when we stop (when n = 1) and on each interation n gets closer to the base case, assuming the user enters a positive integer.
 
+Take some time to really think through the recursion, it may be best to draw out on a pen and paper the iterations. Recursion is usually one of the hardest concepts for a new programmer to get their head around.
+
+We will spend some extra time on some more examples, feel free to skim over them if you feel that you understand recursion, we will also come back to it throughout the course to make our lives easier.
+
+Let's write a program that will return the number of 5's in a number
+
+```python
+
+def count_fives(number):
+	if number == 0: # base case
+		return 0
+	
+	if n % 10 == 5:
+		return 1 + count_fives(number // 10) # 1 for the ones place + call the function for the same number without the ones place
+	else:
+		return 0 + count_fives(number // 10) # 0 for the ones place + call the function for the same number without the ones place
+
+```
+
+The last example we will look at here are the [Fibonacci numbers](https://en.wikipedia.org/wiki/Fibonacci_number).
+
+The Fibonacci numbers are generated by a recursive relation, where you find the following number by adding the previous two numbers, starting with 1 and 1.
+
+For example the third number is 2, since 1 + 1 = 2, then the next number is 3, since 1 + 2 = 3, etc.
+
+```python
+
+def Fibonacci_number(n):
+	if n == 1 or n == 2:
+		return 1 # if its the first or second number we are looking for then the answer is 1
+	else:
+		return Fibonacci_number(n-1) + Fibonacci_number(n-2) # to get the next number, we have to sum the previous two
+		
+```
 #### Lambdas
 
 Lambdas are anonymous functions, or functions that dont have names, they are used when you want to write short one line functions.
@@ -965,7 +1040,9 @@ In the tower of hanoi there are three towers with N rings on the first one (in a
 
 Open up the file for this class and play the game on your terminal/command line to get a feel for the game.
 
-Then try to implement solve, an algorithm that will win the game automatically for you.
+Then try to implement solve, an algorithm that will win the game automatically for you (from the starting position).
+
+For a bit more, try to solve it for any starting configuration.
 
 ##### Vigenere Cipher
 
@@ -973,7 +1050,7 @@ In this cipher our key is not a single number, but rather a word or series of nu
 
 For example if our code is 'abc' and our key is '123' then 'a' gets shifted one place, 'b' two and 'c' three, so we get as an output 'bdf'. If our key is shorter than our code we just wrap around and start again. Again 'z' + 1 = 'a'.
 
-Decripting this algorithm is a bit harder, but not impossible. This problem is a bit more advanced and uses frequency analysis and can be implemented with machine learning.
+Decripting this algorithm is a bit harder, but not impossible. This problem is a bit more advanced and uses frequency analysis and can be implemented with machine learning. We will not cover that in this class.
 
 ### Class 6
 
@@ -996,7 +1073,19 @@ The game of fifteen is an easy one to understand and a bit harder to solve. This
 
 #### Homework Class 6
 
+##### Fifteen Solver
 
+This homework will also be offered as a final project, so it is really given here to get you thinking about different searching problems.
+
+We will now solve the game of fifteen. 
+
+Before we start, you may want to look into [Depth First Search](https://en.wikipedia.org/wiki/Depth-first_search) or/and [Breadth First Search](https://en.wikipedia.org/wiki/Breadth-first_search). You don't have to use these algorithms, but it may give you some ideas and make it easier.
+
+Solving this is not easy, I suggest you write down your psdueo code first on a pen and paper, then dive into the coding after you are finished writing out all the details.
+
+To help you out, try and play the game yourself and see what you as the human do, can you explain why you are trying to do some moves before others. Do you have a general algorithm? If you are having trouble solving the game, then all the more so having the computer solve it will be more rewarding, and maybe scary.
+
+If you get stuck, You may want to read [this on (n^2 -1) puzzle](http://larc.unt.edu/ian/pubs/saml.pdf) and [this paper on a more advanced solving technique](http://webdocs.cs.ualberta.ca/~tony/RecentPapers/pami94.pdf). Reading through these after you write your own solution would be helpful in the future for similar style problems.
 
 ### Class 7
 
@@ -1075,6 +1164,8 @@ def linearSearch(listOfItems,item_to_search_for):
 ##### Binary Search
 
 Binary Search only works on sorted lists. This one will be a specific solution to a integer only list, but you can make a more abstract generalization to the binary search algorithm when we talk more about classes.
+
+Look [here](http://interactivepython.org/runestone/static/pythonds/SortSearch/TheBinarySearch.html) for another code example and interactive step by step.
 
 ```python
 def binarySearch(listOfNumbers,number):
@@ -1181,12 +1272,14 @@ As an aside homework, you can and should start on the final project. There are v
 7. [Backtracking](https://en.wikipedia.org/wiki/Backtracking)
 	- [Sudoku Solver](#sudoku)
 	- [8 Queens Puzzle](https://en.wikipedia.org/wiki/Eight_queens_puzzle)
-8. Solve the game of fifteen [or any n^2 - 1 game](http://larc.unt.edu/ian/pubs/saml.pdf) or compliment with [A*](https://en.wikipedia.org/wiki/A*_search_algorithm)
+8. Solve the game of fifteen [or any n^2 - 1 game](http://larc.unt.edu/ian/pubs/saml.pdf) or compliment with [A*](https://en.wikipedia.org/wiki/A*_search_algorithm) Then solve it for a board of any size.
 9. [Dijkstra's Algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) and [Enhanced Iterative-Deepening Search*](http://webdocs.cs.ualberta.ca/~tony/RecentPapers/pami94.pdf)
 #### Sudoku
 
 
 #### Homework Class 10
+
+The homework for this week is to pick a final project and try to do something with it. Some of them are more layed out and some are more open ended. Have fun and pick something that is interesting to you, and doesn't seem to overwhelming, but still challenging.
 
 ### Python References
 
