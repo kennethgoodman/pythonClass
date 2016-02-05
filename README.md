@@ -450,6 +450,8 @@ To start running the python [interpreter](<https://en.wikipedia.org/wiki/Interpr
 
 Python is a beginner friendly language that has an english-like sytanx. In Python, the interpreter (the thing that will help the computer understand what you are typing) uses spaces or tabs to seperate commands and understand the flow of the program. In other many other languages semicolons and braces ( { } ) are used, or some mixture. You can use semicolons if you'd like, but generally it is not done. Try and stay close to general python coding practices so that others can understand your code better and you will be able to read theirs as well. As you program in Python you will get a better understanding of this.
 
+Throughout this class, you may want to refer to the references on the bottom of the page, or google, my best friend.
+
 ##### Types
 
 Reading [this on variable types](http://www.tutorialspoint.com/python/python_variable_types.htm) is enough for types now, and I highly suggest that you understand this page. It is essential that variables types are understood for the rest of the course. These will be the tools you use to solve problems. This is one of the only readings I will advise you to go through compleately. Don't worry if you don't understand all of it.
