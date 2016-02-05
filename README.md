@@ -1274,8 +1274,31 @@ As an aside homework, you can and should start on the final project. There are v
 	- [8 Queens Puzzle](https://en.wikipedia.org/wiki/Eight_queens_puzzle)
 8. Solve the game of fifteen [or any n^2 - 1 game](http://larc.unt.edu/ian/pubs/saml.pdf) or compliment with [A*](https://en.wikipedia.org/wiki/A*_search_algorithm) Then solve it for a board of any size.
 9. [Dijkstra's Algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) and [Enhanced Iterative-Deepening Search*](http://webdocs.cs.ualberta.ca/~tony/RecentPapers/pami94.pdf)
+10. [Natural Language Processing](http://victoria.lviv.ua/html/fl5/NaturalLanguageProcessingWithPython.pdf). This project is very open ended, I suggest just reading through this book and doing it's homeworks. 
 #### Sudoku
+We will now build a Sudoku solver. This is easier than you think. We will be stupid about it, and I encourage you to try and make the algorithm more effienct in the future. We will brute force it, with some checks for speeding up.
 
+We will be using a [backtracking algorithm](https://en.wikipedia.org/wiki/Backtracking)
+
+The algorithm:
+
+initialize the empty squares to zeros
+create stack that will keep track of the places we have placed numbers
+while we are still solving:
+		if the current square we are at is at or below 8
+			increment the square
+			if the increment was a valid (in terms of row, column and grid)
+				add this position to our stack
+				get the next empty square
+					if none # we solved
+						exit
+		else
+			set square to zero # if it is at 9, then we have made a mistake and must backtrack to the previously placed square
+			go to last placed square and redo 
+
+To help wrap your head around the algorithm, I suggest you write it out on pen and paper, starting to iterate through.
+
+There is sample code in the class file.
 
 #### Homework Class 10
 

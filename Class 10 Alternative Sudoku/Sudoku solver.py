@@ -89,7 +89,7 @@ def solve(board):
 	backtracking solution:
 		
 	while we are still solving:
-		if the current square were at is at or below 8
+		if the current square we are at is at or below 8
 			increment the square
 			if the increment was placeable()
 				add this position to our stack
