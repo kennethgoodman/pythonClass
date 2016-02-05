@@ -446,7 +446,7 @@ To understand some of the work that is done here, I write "#" after code sometim
 
 You can skip this paragraph if you don't want some nitty gritty details, but it is advice to come back at point. As a side note on the difference between python 2.7 or less and python 3 and greater: There are small differences between the versions that will slightly be mentioned throughout the course, it should not matter what version you use at this point. On Mac computers, python 2.7 comes preinstalled (at the time of this writing), so it may be easier to stick with 2.7 for now. In the future you may want to port over to 3.x. On windows, if you downloaded 3.x then you will want to use that versions documentation. The differences will not always effect you, but come important in a couple places. The main differences in the begginning parts of the course are the `print` and `input` commands/functions. In 2.7 and below `print` is a keyword and in 3+ it is a function meaning if you want to print you do: `print 5 # < 2.7` and `print(5) # 3+`. If you do it with parenthesis in 2.7 it will still work, so I advise you get into practice of using parenthesis for when you port your programs in the future. I mention inputting later. Another difference is the division operator, we will talk about that later.
 
-To start running the python [interpreter](<https://en.wikipedia.org/wiki/Interpreter_(computing)>) Open either the command line (on windows) or the terminal (on *nix systems such as Mac, Linux, Unix, etc.) and just type `python`. Play around with some math `5 + 5`, `4.0/3`, `4*4` (some weird things may happen if you do division based on your version, so don't freak out).
+To start running the python [interpreter](<https://en.wikipedia.org/wiki/Interpreter_(computing)>) Open either the command line (on windows) or the terminal (on *nix systems such as Mac, Linux, Unix, etc.) and just type `python`. Play around with some math `5 + 5`, `4.0/3`, `4*4` (some weird things may happen if you do division based on your version, so don't freak out). You can also use an [Online interpreter](http://www.tutorialspoint.com/ipython_terminal_online.php).
 
 Python is a beginner friendly language that has an english-like sytanx. In Python, the interpreter (the thing that will help the computer understand what you are typing) uses spaces or tabs to seperate commands and understand the flow of the program. In other many other languages semicolons and braces ( { } ) are used, or some mixture. You can use semicolons if you'd like, but generally it is not done. Try and stay close to general python coding practices so that others can understand your code better and you will be able to read theirs as well. As you program in Python you will get a better understanding of this.
 
@@ -1311,6 +1311,8 @@ The homework for this week is to pick a final project and try to do something wi
 - [Python documentation 2.7.11](https://docs.python.org/2.7/)
 - [tutorialspoint](http://www.tutorialspoint.com/python/)
 - [Free Python Books](https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#python)
+- sentdex's [website](https://pythonprogramming.net/) and his [youtube channel's playlists](https://www.youtube.com/user/sentdex/playlists?sort=dd&view=1)
+- [Online interpreter](http://www.tutorialspoint.com/ipython_terminal_online.php)
 
 ### Text editors and misc.
 
