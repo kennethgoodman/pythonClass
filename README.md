@@ -210,6 +210,10 @@ Will be used for sharing code and learning python
 							<a href="#binary-search">Binary Search</a>
 						</li>
 					</ul>
+				</li>
+				<li>
+					<a href="#exceptions">Exceptions</a>
+				</li>
 				<li>
 					<a href="#homework-class-7">Homework</a>
 				</li>
@@ -448,9 +452,9 @@ You can skip this paragraph if you don't want some nitty gritty details, but it 
 
 To start running the python [interpreter](<https://en.wikipedia.org/wiki/Interpreter_(computing)>) Open either the command line (on windows) or the terminal (on *nix systems such as Mac, Linux, Unix, etc.) and just type `python`. Play around with some math `5 + 5`, `4.0/3`, `4*4` (some weird things may happen if you do division based on your version, so don't freak out). You can also use an [Online interpreter](http://www.tutorialspoint.com/ipython_terminal_online.php).
 
-Python is a beginner friendly language that has an english-like sytanx. In Python, the interpreter (the thing that will help the computer understand what you are typing) uses spaces or tabs to seperate commands and understand the flow of the program. In other many other languages semicolons and braces ( { } ) are used, or some mixture. You can use semicolons if you'd like, but generally it is not done. Try and stay close to general python coding practices so that others can understand your code better and you will be able to read theirs as well. As you program in Python you will get a better understanding of this.
+Python is a beginner friendly language that has an english-like sytanx. In Python, the interpreter (the thing that will help the computer understand what you are typing) uses spaces or tabs to seperate commands and understand the flow of the program. In other many other languages semicolons and braces, '{ }', are used, or some mixture. You can use semicolons if you'd like, but generally it is not done. Try and stay close to general python coding practices so that others can understand your code better and you will be able to read theirs as well. As you program in Python you will get a better understanding of this.
 
-Throughout this class, you may want to refer to the references on the bottom of the page, or google, my best friend.
+Throughout this class, you may want to refer to the references on the bottom of the page, or google, your new best friend.
 
 ##### Types
 
@@ -1102,6 +1106,7 @@ If you get stuck, You may want to read [this on (n^2 -1) puzzle](http://larc.unt
 4. [Searching](#searching)
 	- [Linear Search](#linear-search)
 	- [Binary Search](#binary-search)
+5. [Exceptions](#exceptions)
 5. [Homework](#homework-class-7)
 	
 #### Reading Class 7
@@ -1184,6 +1189,7 @@ def binarySearch(listOfNumbers,number):
 ```
 
 You can look and play around with the class file on Binary Search to get a feel for it.
+#### Exceptions
 
 #### Homework Class 7
 
@@ -1198,7 +1204,6 @@ You can look and play around with the class file on Binary Search to get a feel 
 	- [Queues](#queues)
 	- [Stacks](#stacks)
 	- [Tuples](#tuples)
-	- [Heaps](#heaps)
 	- [Graphs](#graphs)
 	- [Mutability](#mutability)
 3. [Intro to classes](#intro-to-classes)
@@ -1210,7 +1215,7 @@ You can look and play around with the class file on Binary Search to get a feel 
 You may want to go back and get a better understanding of [Lists](http://www.tutorialspoint.com/python/python_lists.htm),
 [tuples](http://www.tutorialspoint.com/python/python_tuples.htm), [dictionaries](http://www.tutorialspoint.com/python/python_dictionary.htm) in python.
 
-Furthermore, you should skim through [Linked Lists](https://en.wikipedia.org/wiki/Linked_list) and take a look at some of the data structures [here](https://en.wikipedia.org/wiki/List_of_data_structures) (some are less important than others). In general the most important ones are [arrays](https://en.wikipedia.org/wiki/Array_programming) (in python lists), [hashtables](https://en.wikipedia.org/wiki/Hash_table) (in python dictionaries), [tuples](https://en.wikipedia.org/wiki/Tuple), [linked lists](https://en.wikipedia.org/wiki/Linked_list), [trees](https://en.wikipedia.org/wiki/Tree_(data_structure)) (we will cover in class 9), [Graphs](<https://en.wikipedia.org/wiki/Graph_(abstract_data_type)>), [Stacks](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>) (Cover in class 10 in sudoku), and [Heaps](<https://en.wikipedia.org/wiki/Heap_(data_structure)>).
+Furthermore, you should skim through [Linked Lists](https://en.wikipedia.org/wiki/Linked_list) and take a look at some of the data structures [here](https://en.wikipedia.org/wiki/List_of_data_structures) (some are less important than others). In general the most important ones are [arrays](https://en.wikipedia.org/wiki/Array_programming) (in python lists), [hashtables](https://en.wikipedia.org/wiki/Hash_table) (in python dictionaries), [tuples](https://en.wikipedia.org/wiki/Tuple), [linked lists](https://en.wikipedia.org/wiki/Linked_list), [trees](<https://en.wikipedia.org/wiki/Tree_(data_structure)>) (we will cover in class 9), [Graphs](<https://en.wikipedia.org/wiki/Graph_(abstract_data_type)>), [Stacks](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>) (Cover in class 10 in sudoku), and [Heaps](<https://en.wikipedia.org/wiki/Heap_(data_structure)>).
 
 ###### Reading on classes
 
@@ -1221,21 +1226,158 @@ magic methods: [rafekettler](http://www.rafekettler.com/magicmethods.html) or [p
 
 #### Data Structures
 
+Throughout reading these data structures and afterwards, I would advise you to look at this great [cheat sheet](http://bigocheatsheet.com/) on big O for each of these data structures.
+
+Furthermore, this website has a great [Visualization of common themes](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html) that you might want to look at.
+
 ##### Hashing
+Hashing is a the way of classifiying data into some group based on some property. To be less abstract I will give you an example. If I am a farmer and have three baskets that I want to store all my food in, how would I go about doing this, so that when I want to find, lets say apples, It will be easiest. If I only have three types of food that I farm, then it will be easy, but what if I have 6 or 9 or 100? Well what you want is to find some way so that each basket has around 1/3 of the types of food you produce so that you can find the item you are looking for the quickest possible. One way could be fruits, vegetables and grains. Or if you have a lot of grains and few fruit and vegetables, maybe put half the grain types in one, the other half in another and mix fruit and vegetables. In programming we can do the same thing, and this is implemented with pythons `hash()` method. You do not need to learn the internals of how hashing works, but you should know that there is some way that the method decideds which numbers (basket) the piece of data you have justed hashed should map towards. This can be really convient if you have a large number of elements that have no apparant order. For instance, if you had 100 items, and could map each item to a number 1 through 100, then put that item into a list at the number the item was mapped to, then to find the item again would only cause one lookup, quickly being able to retrieve that item. In python, dictionaries use hashing to store items and is one of the reasons there does not seem to be an order or have the order in which you placed them. The function that maps them is something that more mathy people may want to look into.
+
 ##### Linked Lists
+
+This [visualization](http://visualgo.net/list.html) should be helpful.
+
+A linked list is a list that does not necessarily have an index like an array/list. When a linked list is instantionated, a first node and a last node is created. These nodes are 'pointing' towards the place where the first and last elements of the list are located in the computer. As the list is generated the node that points to the first element (head node) and the one that points to the last node (tail node) continiously change as you add elements. As we add elements, we have a node that holds the data, and then a 'pointer' to the next node. There are different implementations regarding how exactly it is constructed, but the concepts remain the same.
+
+The reason linked lists are useful is that you can add elements anywhere in the list and not have to shift all the other elements over. In an array/list, if you had `a = [1,2,3,5,6]` and then decided, I should put a 4 between the 3 and 5, and also put a 0 at the beginning, how would you do that, well first you would need to move the 5 and 6 over one place to make room for the 4, then move the rest of them over to make room for the 0. Let's say you were smart and decided to move over the 5 and 6 two places, and the rest 1 place. That would still cost you n moves, where n is the number of elements to the right of the index you are adding (here 5). In a linked list you would not have to move anything over, you can just move the 'pointer' to a different place and then tell this new place to then point to the next element, pretty easy, huh.
+
 ##### Trees
+
+Trees are useful for sorted data. What I mean by sorted is that if you can describe the data in some way that if A < B and B < C then A < C. The opposite holds as well. If D > E and E > F then D > F. Furthermore if you would like to search your data with extreme speeds, then a tree might be for you. A tree is a data structure that 'points' to 2 or more nodes. We will deal with a binary tree ('points' to 2 nodes) here. For three and more nodes, the concepts are similar. 
+
+When you create a tree you have your root node that has two empty pointers (we will call them left pointer and right pointer). When we add a node, we ask: is this new piece of data less than or greater than the root node, if it is less than, use the left pointer to put the data. If it is greater than, use the right pointer. After we make the first decision, we can ask the same question again, with the exception that we must ask if this point has not been assigned yet, if not put the data here, else ask the question again, is it less than or greater than. You might start to realize that this looks recursive, if not we will go through it in a bit. The case where the data is equal is up to the creator, and can be done either way, in each case you might want something different or not care at all. (maybe a third pointer for the case of equal?)
+
+This is recursive since when we decide to go down one of the paths towards either left or right, we are back where we started, decided if we should stop here, go left again or go right. Needing no knowledge of what happened before. The current node can be seen as a root node itself. It just happens to have a 'pointer' to it from some other node.
+
 ##### Queues
+
+Here we will define a little jargon. For line structured data we use the terms FIFO/LILO, LIFO/FILO which are acronyms for first in first out/first in last out and last in first out/first in last out. These mean exactly what they sound like, the first one in, is the first one out or FIFO. The last one in is the first one to come out or LIFO. A queue is a FIFO line, you may have experienced this in the supermarket or at a bank teller. The first one in is also the first one out. Now you may take longer at the checkout/teller so you may not actually be the first one out, but assuming each person takes the same amount of time, you would be.
+
 ##### Stacks
+
+A stack is the opposite in a sense from a queue in that it is LIFO, or the last person who comes in, is the first person to come out (last in, first out). A good example of this is when you stack items, such as dished, usually the last one to be stacked is the first one you wash. Hence the name 'stack.'
+
 ##### Tuples
-##### Heaps
+
+Tuples you may have seen already in this course or while programming, a tuple is a data structure that associated n items together.
+
+This is used differently in different languages, but if I wanted to say `a = (1,2,3)` then I would have just created a 3-tuple that has 3 items.
+
+Tuples in python are not mutable (immutable), meaning you can not change an item in the tuple, if you want to do that, use a list.
+
 ##### Graphs
+
+A graph is exactly what it sounds like, some graph with edges and vertices connecting them to each other. This can be implemented in many ways, but a common way is to extend the definition of a linked list to have some list of 'pointers' so that each node can point to as many (or some limit) number of nodes. In this way, a node can have many nodes pointing to it, and many nodes that it points to. If you have a node that is not pointed to by any of the nodes. You would need to create a new list as it is technically in a different graph.
+
 ##### Mutability
+
+Here is a quick look at [pythons types based on mutability](https://en.wikibooks.org/wiki/Python_Programming/Data_Types#Mutable_vs_Immutable_Objects)
+
+Mutability is the ability to change an item. In many programming languages certain types and data structures are not mutable, we will now discuss which ones are not mutable.
+
+As we have already seen, Tuples are not mutable. Meaning if you said `a = (1,2,3)` then tried to execute `a[0] = 2` as to form the tuple (2,2,3) you would get a TypeError error. Try it. This is because you cannot change the data inside the tuple. But what you can do, is reassign a to a new tuple so `a=(2,2,3)` would work. Or if you just want to change the first element you can do `a = (2,) + a[1:] ` . It is a bit strange, but as you dive deeper into python and mutability it will start to make sense.
+
+In python if you want to use a variable as a key in a dictionary it must be immutable, to learn a bit more, read [here](http://effbot.org/pyfaq/why-must-dictionary-keys-be-immutable.htm). It talks about classes, so maybe it will make more sense after the next two classes.
+
 
 #### Intro to classes
 
+Classes are a way to define your own data type and to implement ones you have learned about. To define your own class you use the keyword `class`. Then you need some method inside the class to tell it what to do when you instantiate the class. For instance, if you wanted to create a class to represent fractions you would need to give it the numerator(top of fraction) and denominator(bottom of fraction). Lets take a look:
+
+```python
+class fraction():
+	def __init__(self, top, bottom):
+		self.numerator = top
+		self.denominator = bottom
+
+f = fraction(1,2) # setting f to be the fraction 1/2
+```
+
+Lets take a look line by line. `class fraction():` just telling the computer I am creating a class named fraction.
+
+`def __init__(self, top, bottom):` Here I creating the instantiate method, yes you do need the two underscores, we will get to those in class 9. Then we have three arguements: self, top, bottom. self is used for us to reference the actuall item that holds the data. Meaning if we want some to say that this class has this data, or we want to call a class method or access the class data, as long as we are inside the class, we will use self. self must be used as the first arguement in every method in a class. You do not need to use the word self, but it is advised as other programming languages force you to, and it makes reading your code easier. The last two arguements are just what the user inputs.
+
+`self.numerator = top` This allows us to have every fraction object to have a numerator and set it to the first argument the user calls
+
+`f = fraction(1,2)` just call it like a function, but will instantiate f as a fraction class.
+
+If you want to obtain a piece of data, we will create a couple more methods.
+
+```python
+class fraction():
+	def __init__(self, top, bottom):
+		self.numerator = top
+		self.denominator = bottom
+	def getNumerator(self):
+		return self.numerator
+	def getDenominator(self):
+		return self.denominator
+	def setNumerator(self, top):
+		self.numerator = top
+	def setDenominator(self, bottom):
+		self.denominator = bottom
+f = fraction(1,2) # setting f to be the fraction 1/2
+f.getNumerator() # would return 1
+f.setNumerator(3) # would set the numerator as 3, so f is the fraction 3/2
+f.getNumerator() # would return 3
+```
+
+What we have done here is added methods to get and set the data in the fraction. Try out some yourself. How would you implement a method to add two fractions?
+
+Well we can define a method `add(fraction1, fraction2)` or we can create a class method so that we can write `f.add(f2)`, the last possibility is to tell computer what it means to use the addition symbol '+' with a fraction class and write `f + f2`. I will do the second one here and the third way in the next class.
+
+```python
+class fraction():
+	def __init__(self, top, bottom):
+		self.numerator = top
+		self.denominator = bottom
+	def getNumerator(self):
+		return self.numerator
+	def getDenominator(self):
+		return self.denominator
+	def setNumerator(self, top):
+		self.numerator = top
+	def setDenominator(self, bottom):
+		self.denominator = bottom
+	def add(self, fraction2):
+		bottom = self.getDenominator() * fraction2.getDenominator()
+		top    = self.getNumerator()*fraction2.getDenominator() + fraction2.getNumerator()*self.getDenominator()
+		return fraction(top, bottom)
+f = fraction(1,2)
+g = fraction(1,3)
+h = f.add(g) # should return a fraction 5/6
+```
+
+Here we used some math to add fractions, using cross multiplication. We did not simplify the fraction, but we could have. Take a look [here](https://www.mathsisfun.com/fractions_addition.html) for more explanation.
+
 #### Homework Class 8
 
-The homework for this class will be more of a self study then a project. Being able to implement a sorting alogrithm or common data structure is useful but not essential. People have already optimized most data structures and sorting algorithms, so doing it yourself would only be for learning sake. I would suggest you look at the class file and get a better understanding of how classes are creates to create a data structures. Furtheremore I suggest you try and read through the pseudocode for various sorting algorithms on wikiepedia and try to implement them in python. If you get stuck, the internet has the answers.
+Being able to implement a sorting alogrithm or common data structure is useful but not essential. People have already optimized most data structures and sorting algorithms, so doing it yourself would only be for learning sake. I would suggest you look at the class file and get a better understanding of how classes are creates to create a data structures. Furtheremore I suggest you try and read through the pseudocode for various sorting algorithms on wikiepedia and try to implement them in python. If you get stuck, the internet has the answers.
+
+For this weeks homework you should try and implement a fraction class that has three pieces of data, the whole part, the numerator, the denominator. Meaning that if you add two fractions and it is larger than one, then your whole part should be the integer, and the fraction should always be less than one.
+You should also create the following methods: get methods (for whole, numerator, denominator), set methods (for whole, numerator, denominator), add, subtract, multiply, divide (make sure you don't divide by zero), printFraction and simplify (which will simply a fraction to its lowest terms).
+
+printFraction can print anything that you think would help the user understand what the fraction is currently at.
+
+By simplify we mean:
+
+```python
+f = fraction(4,8) # f = 4/8
+f.simplify()  	  # f should now equal 1/2
+```
+
+
+You may want to use a couple functions for your help in some of the functions:
+
+```python
+from fractions import gcd #greatest common divisor
+
+def lcm(a, b): # least common multiple
+    return a * b // gcd(a, b)
+
+```
+
+This one is a bit more mathematical, so if you are unsure how to do this correctly, look [here](https://www.mathsisfun.com/simplifying-fractions.html).
 
 ### Class 9
 
@@ -1324,6 +1466,8 @@ The homework for this week is to pick a final project and try to do something wi
 - [Python Decoraters Library](https://wiki.python.org/moin/PythonDecoratorLibrary)
 - [Descriptors](http://users.rcn.com/python/download/Descriptor.htm)
 - [A curated list of awesome Python frameworks, libraries and software](https://github.com/vinta/awesome-python)
+- [Big O cheat sheet](http://bigocheatsheet.com/)
+- [Visualization of common themes](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 
 ### Text editors and misc.
 
