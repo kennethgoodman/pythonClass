@@ -1265,7 +1265,7 @@ As an aside homework, you can and should start on the final project. There are v
 
 #### Reading Class 10
 #### Final Project
-1. Brick breaker (using [pygame](http://pygame.org/hifi.html))
+1. Brick breaker (using [pygame](http://pygame.org/hifi.html)), [Pygame tutorial](https://pythonprogramming.net/pygame-python-3-part-1-intro/)
 2. something with [matplotlib](http://matplotlib.org/)
 3. something with [numpy](http://www.numpy.org/)
 4. something with [sympy](http://www.sympy.org/en/index.html)
@@ -1315,6 +1315,15 @@ The homework for this week is to pick a final project and try to do something wi
 - [Free Python Books](https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md#python)
 - sentdex's [website](https://pythonprogramming.net/) and his [youtube channel's playlists](https://www.youtube.com/user/sentdex/playlists?sort=dd&view=1)
 - [Online interpreter](http://www.tutorialspoint.com/ipython_terminal_online.php)
+- [A github page with various information](https://github.com/logston/NYCPythonSOH/blob/master/resources.rst)
+- [consolidation of python tutorials/guides](http://teachyourselftocode.com/python)
+- [Hidden features and tricks](http://stackoverflow.com/questions/101268/hidden-features-of-python#111176)
+- [Natural Language Processing Book](http://victoria.lviv.ua/html/fl5/NaturalLanguageProcessingWithPython.pdf)
+- [Python Tricks and Hints](http://www.secnetix.de/olli/Python/tricks.hawk#checkver)
+- Decoraters [1](http://www.artima.com/weblogs/viewpost.jsp?thread=240808), [2](http://www.artima.com/weblogs/viewpost.jsp?thread=240845), and [3](http://www.artima.com/weblogs/viewpost.jsp?thread=241209)
+- [Python Decoraters Library](https://wiki.python.org/moin/PythonDecoratorLibrary)
+- [Descriptors](http://users.rcn.com/python/download/Descriptor.htm)
+- [A curated list of awesome Python frameworks, libraries and software](https://github.com/vinta/awesome-python)
 
 ### Text editors and misc.
 
