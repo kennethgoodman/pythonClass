@@ -12,8 +12,8 @@ description: > # this means to ignore newlines until "baseurl:"
   This website was created to help users navigate through the class I put together. 
   You are more than welcome to use all the material here for free for whatever purpose you desire. 
   I will gladly take any feedback you may have.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://kennethgoodman.github.io/pythonClass/" # the base hostname & protocol for your site
+baseurl: "pythonClass/" # the subpath of your site, e.g. /blog
+url: "http://kennethgoodman.github.io/" # the base hostname & protocol for your site
 github_username:  kennethgoodman
 # Build settings
 markdown: kramdown
