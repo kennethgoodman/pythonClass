@@ -1,0 +1,234 @@
+---
+layout: default
+title: Class 2
+base: ../
+---
+<div class="ClassMaterial">
+    <!-- OUTLINE -->
+    <li>
+        <a href="#class-2">Class 2</a>
+    </li>
+    <ol>
+        <li>
+            <a href="#reading-class-2">Reading</a>
+        </li>
+        <li>
+            <a href="#basics-of-programming">Basics of programming</a>
+            <ul>
+                <li>
+                    <a href="#python">Python</a>
+                </li>
+                <li>
+                    <a href="#variables">Variables</a>
+                </li>
+                <li>
+                    <a href="input-and-output">Input and Output</a>
+                </li>
+                <li>
+                    <a href="#if-statements">If Statements</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#homework-class-2">Homework</a>
+        </li>
+    </ol> 
+    <!-- OUTLINE -->
+    <h3>
+    <a id="class-2" class="anchor" href="#class-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Class 2</h3>
+
+    <ol>
+    <li><a href="#reading-class-2">Reading</a></li>
+    <li>
+    <a href="#basics-of-programming">Basics of programming</a>
+
+    <ul>
+    <li><a href="#python">Python</a></li>
+    <li><a href="#variables">Variables</a></li>
+    <li><a href="#input%20and%20output">Input and output</a></li>
+    <li><a href="#if-statements">If statements</a></li>
+    </ul>
+    </li>
+    <li><a href="#homework-class-2">Homework</a></li>
+    </ol>
+
+    <h4>
+    <a id="reading-class-2" class="anchor" href="#reading-class-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Reading Class 2</h4>
+
+    <p>To be familar with the upcoming section, skim through <a href="http://www.tutorialspoint.com/python/python_basic_syntax.htm">this on basic syntax</a>.</p>
+
+    <p>Read through <a href="http://www.tutorialspoint.com/python/python_variable_types.htm">this on variable types</a>.</p>
+
+    <p>Skim through <a href="http://www.tutorialspoint.com/python/python_basic_operators.htm">this on basic operations</a>.</p>
+
+    <p>Read through <a href="http://www.tutorialspoint.com/python/python_decision_making.htm">this on decision making</a> carefully.</p>
+
+    <p>When we say carefully, we really mean, try to really understand, the better you understand what is going on, the better you will code, and the less you will debug later.</p>
+
+    <p>Optional:
+    <a href="http://www.tutorialspoint.com/python/python_numbers.htm">Math and numbers</a>
+    <a href="http://www.tutorialspoint.com/python/python_strings.htm">Strings</a>
+    <a href="http://www.i-programmer.info/babbages-bag/235-logic-logic-everything-is-logic.html">Boolean Logic</a></p>
+
+    <h4>
+    <a id="basics-of-programming" class="anchor" href="#basics-of-programming" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basics of programming</h4>
+
+    <h5>
+    <a id="python" class="anchor" href="#python" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Python</h5>
+
+    <p>Python is a beginner friendly language that has an english-like sytanx. In Python, the interpreter (the thing that will help the computer understand what you are typing) uses spaces or tabs to seperate commands and understand the flow of the program. In other many other languages semicolons and braces ( { } ) are used, or some mixture. You can use semicolons if you'd like, but generally it is not done. Try and stay close to general python coding practices so that others can understand your code better and you will be able to read theirs as well. As you program in Python you will get a better understanding of this.</p>
+
+    <p>To understand some of the work that is done here, I write "#" after code sometimes, there are comments. They are english and ignored by the computer. Read them as an english commenter for the line of code or the code your about to read or just read. </p>
+
+    <h5>
+    <a id="variables" class="anchor" href="#variables" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>variables</h5>
+
+    <p>In python you can create a variable easily as long as you don't name it one of the keywords. You can read about the <a href="http://zetcode.com/lang/python/keywords/">keywords here</a>.</p>
+
+    <p>If you wanted to put a mathematical expression or a sentence or a mixed list you would do it like this:</p>
+
+    <div class="highlight highlight-source-python"><pre>x <span class="pl-k">=</span> <span class="pl-c1">5</span> <span class="pl-k">+</span> <span class="pl-c1">12</span> <span class="pl-k">+</span> <span class="pl-c1">24</span> <span class="pl-k">+</span> <span class="pl-c1">36</span>
+    sentence <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">"</span>I love coding in python<span class="pl-pds">"</span></span>
+    mixedList <span class="pl-k">=</span> [<span class="pl-c1">5</span> <span class="pl-k">+</span> <span class="pl-c1">23</span>, <span class="pl-c1">0</span>, <span class="pl-s"><span class="pl-pds">"</span>Coding is fun<span class="pl-pds">"</span></span>, <span class="pl-c1">10.5</span>, <span class="pl-s"><span class="pl-pds">"</span>Hello world!<span class="pl-pds">"</span></span>]</pre></div>
+
+    <p>To play around with this, open the interpreter (by typing python in your terminal/command line or using an online one <a href="https://www.pythonanywhere.com/try-ipython/">here</a>) and try it out.</p>
+
+    <h5>
+    <a id="input-and-output" class="anchor" href="#input-and-output" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>input and output</h5>
+
+    <p>If we want to output, we use 'print', it does not matter about the internals here at this point, for our sake lets use it as a function like so:</p>
+
+    <div class="highlight highlight-source-python"><pre><span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Hello World<span class="pl-pds">"</span></span>)</pre></div>
+
+    <p>You may want to skim through <a href="http://www.python-course.eu/input.php">this</a> before you continue.</p>
+
+    <p>Input in python is simple but is different depending on your version. If you are using python 2.7 or less than you want to use raw_input() if your using python 3 or above, you want to use input(). In the class folder there is a helpFunctions.py file, you can read through it if you'd like. To get the users name:</p>
+
+    <div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> helperFunctions <span class="pl-k">import</span> <span class="pl-k">*</span>
+    name <span class="pl-k">=</span> getString(<span class="pl-s"><span class="pl-pds">"</span>Please enter a name<span class="pl-pds">"</span></span>)</pre></div>
+
+    <p>and to print it</p>
+
+    <div class="highlight highlight-source-python"><pre><span class="pl-c1">print</span>(name)</pre></div>
+
+    <p>or</p>
+
+    <div class="highlight highlight-source-python"><pre><span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Hello <span class="pl-pds">"</span></span> <span class="pl-k">+</span> name)</pre></div>
+
+    <h5>
+    <a id="if-statements" class="anchor" href="#if-statements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>If statements</h5>
+
+    <p>If statements are a logical way to make decisions based on unknown input. We use if statements in our lives all the time. For example, we say "if I am late, leave without me", "If I don't catch the bus, I'll take a cab". </p>
+
+    <p>In programming we use if statements as a form of controlling the flow of the program. The sytanx is pretty straightforward, you can read about it <a href="https://docs.python.org/2/tutorial/controlflow.html">here</a>, only the first section is necessary.</p>
+
+    <p>The syntax, taken from the docs:</p>
+
+    <div class="highlight highlight-source-python"><pre><span class="pl-k">if</span> x <span class="pl-k">&lt;</span> <span class="pl-c1">0</span>:
+        <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">'</span>x is negative<span class="pl-pds">'</span></span>)
+    <span class="pl-k">elif</span> x <span class="pl-k">==</span> <span class="pl-c1">0</span>: <span class="pl-c">#else if</span>
+        <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">'</span>x is zero<span class="pl-pds">'</span></span>)
+    <span class="pl-k">elif</span> x <span class="pl-k">==</span> <span class="pl-c1">1</span>: <span class="pl-c">#else if</span>
+        <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">'</span>x is one<span class="pl-pds">'</span></span>)
+    <span class="pl-k">else</span>:
+        <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">'</span>x is positive and not one<span class="pl-pds">'</span></span>) <span class="pl-c"># not less than zero, not zero and not one</span></pre></div>
+
+    <p>the if statement checks if x is less than zero, if it is it will print: 'x is negative', if it is not and if (else if) x is zero then print: 'x is zero', if it is not and if x is 1, print: 'x is one', else in all other cases, print: 'x is positive and not one'</p>
+
+    <p>This next example is going to be a bit confusing, I do this, not to confuse you on purpose, but to try and drive home a point.</p>
+
+    <p>The inside of an if statement need not be a single command, it can be an if statement itself, in fact it can be any number statements, for example:</p>
+
+    <div class="highlight highlight-source-python"><pre>x <span class="pl-k">=</span> <span class="pl-c1">25</span>
+    <span class="pl-k">if</span> x <span class="pl-k">&gt;</span> <span class="pl-c1">10</span>:
+        <span class="pl-k">if</span> x <span class="pl-k">&gt;</span> <span class="pl-c1">30</span>:
+            <span class="pl-k">if</span> x <span class="pl-k">&gt;</span> <span class="pl-c1">50</span>:
+                <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>x is really big<span class="pl-pds">"</span></span>)
+            <span class="pl-k">else</span>: <span class="pl-c"># 30 &lt; x &lt; 50</span>
+                <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>x is prety big<span class="pl-pds">"</span></span>)
+        <span class="pl-k">else</span>: <span class="pl-c"># 10 &lt; x &lt; 30</span>
+            <span class="pl-k">if</span> x <span class="pl-k">&gt;</span> <span class="pl-c1">20</span>: <span class="pl-c"># 20 &lt; x &lt; 30</span>
+                <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>x is big<span class="pl-pds">"</span></span>)
+            <span class="pl-k">else</span>: <span class="pl-c1">10</span> <span class="pl-k">&lt;</span> x <span class="pl-k">&lt;</span> <span class="pl-c1">20</span>
+                <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>x is nicely sized<span class="pl-pds">"</span></span>)
+    <span class="pl-k">else</span>: <span class="pl-c"># x &lt; 10</span>
+        <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>x is small<span class="pl-pds">"</span></span>)</pre></div>
+
+    <p>I agree there are better ways to write this, but this is just an example of how you can nest code for more complicated control flow.</p>
+
+    <p>The last thing we will do with if statements, is boolean logic. In python if you want to test for multiple conditions in an if statement, you can use keywords like <code>and</code> or <code>or</code>. They are very useful and can make reading code really easy.</p>
+
+    <div class="highlight highlight-source-python"><pre>x <span class="pl-k">=</span> <span class="pl-c1">25</span>
+
+    <span class="pl-k">if</span> <span class="pl-c1">10</span> <span class="pl-k">&lt;=</span> x <span class="pl-k">and</span> x <span class="pl-k">&lt;=</span> <span class="pl-c1">50</span>: <span class="pl-c"># &lt;= means: less than or equal, similar &gt;= would mean: more than or equal</span>
+        <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>x is in the middle<span class="pl-pds">"</span></span>)
+     <span class="pl-c"># another example:</span>
+
+    <span class="pl-k">if</span> x <span class="pl-k">&lt;</span> <span class="pl-c1">10</span> <span class="pl-k">or</span> x <span class="pl-k">&gt;</span> <span class="pl-c1">50</span>:
+        <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>x is not in the middle<span class="pl-pds">"</span></span>)</pre></div>
+
+    <p>A neat cool trick that you can do in python is some regular mathematical inequalities:</p>
+
+    <div class="highlight highlight-source-python"><pre>x <span class="pl-k">=</span> <span class="pl-c1">25</span>
+
+    <span class="pl-k">if</span> <span class="pl-c1">20</span> <span class="pl-k">&lt;=</span> x <span class="pl-k">&lt;</span> <span class="pl-c1">30</span>:
+        <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>x is in the twenties<span class="pl-pds">"</span></span>)
+    </pre></div>
+
+    <p>As a side note, <code>!=</code> means not equal.</p>
+
+    <h4>
+    <a id="homework-class-2" class="anchor" href="#homework-class-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Homework Class 2</h4>
+
+    <p>Now that you know how to get input from the user, you will do some logic on the users input.</p>
+
+    <ol>
+    <li>ask the user for their name
+
+    <ul>
+    <li>if they give you name that does not have at least 3 charachters or more than 20, ask one more time.
+
+    <ul>
+    <li>if again they do not give you a good name, don't do anything more, you may use <code>exit()</code>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </li>
+    <li>If the initial of their first name is before m or m, then tell them "your first name starts at the beginning of the alphabet"</li>
+    <li>Otherwise tell the user "Your first initial starts at the end of the alphabet"</li>
+    </ol>
+
+    <p>Here is some pseudocode to help with your first coding homework:</p>
+
+    <pre><code>get name from user
+    if its less than 3 letters or longer than 20
+        get name from user
+        if name is still less than 3 letters or longer than 20
+            exit
+    if initial of first name is between 'a' and 'm'
+        print("your first name starts at the beginning of the alphabet")
+    else
+        print("Your first initial starts at the end of the alphabet")
+    </code></pre>
+
+    <p>You may use the helperfunctions file. There you can find the functions between(charA, charB) use like:</p>
+
+    <div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span> <span class="pl-k">in</span> between(<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>d<span class="pl-pds">'</span></span>) <span class="pl-c"># True</span>
+    <span class="pl-s"><span class="pl-pds">'</span>C<span class="pl-pds">'</span></span> <span class="pl-k">in</span> between(<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>d<span class="pl-pds">'</span></span>) <span class="pl-c"># True even though it is capitalized</span>
+    <span class="pl-s"><span class="pl-pds">'</span>f<span class="pl-pds">'</span></span> <span class="pl-k">in</span> between(<span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>d<span class="pl-pds">'</span></span>) <span class="pl-c"># False</span></pre></div>
+
+    <p>To include the between function in your code, on the top of your code write:</p>
+
+    <div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> helperFunctions <span class="pl-k">import</span> <span class="pl-k">*</span></pre></div>
+
+    <p>the "*" is a wildcard, like a joker in cards, it tells the computer, I want anything and everything. It is generally better to name the functions you are looking for, this way when you reread your code (or someone reads yours), it will be known why that file/library/module was called in, but for our sake, this is enough. At this stage it is not important for us to delve into the functions that were prepared.</p>
+
+    <p>If you would like to do it:</p>
+
+    <div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> helperFunctions <span class="pl-k">import</span> between</pre></div>
+
+    <p>You may see this done differently online or in other examples, we will talk about importing later as well.</p>
+
+    <p><a href="http://www.tutorialspoint.com/python/python_if_else.htm">This reading on if/else statements</a> from the reading section may come in handy.</p>
+</div>

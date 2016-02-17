@@ -14,8 +14,8 @@
                 <li {% if page.title == 'Home' %}class="active"{% endif %}>
                     <a href="/pythonClass/">Home</a>
                 </li>
-                <li {% if page.title == 'Readme' %}class="active dropdown"{% else %}class="dropdown"{% endif %}>
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Readme<span class="caret"></span></a>
+                <li {% if page.title == 'Entire Course' %}class="active dropdown"{% else %}class="dropdown"{% endif %}>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Entire Course<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/pythonClass/sitePages/readme.html">        Outline</a></li>
                         {% for i in (1..10) %}
@@ -25,6 +25,11 @@
                         {% endfor %}
                     </ul>
                 </li>
+                {% for p in site.pages %}
+                    <li {% if page.url == p.url %}class="active"{% endif %}>
+                        {% if p.title == "About" %}{% elsif p.title == "Home" %}{% elsif p.title == "Entire Course" %}{% else %}<a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>{% endif %}
+                    </li>
+                {% endfor %}
             </ul>
         </div>
     </div>
