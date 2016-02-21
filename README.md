@@ -692,28 +692,28 @@ Get a height from the user and print a triangle (using stars) to the screen usin
 
 For example if the user enters: 3, the output should be:
 <pre>
-   *
-  **
- ***
+   @
+  @@
+ @@@
 </pre>
  
 If the user enters 5, the output should be:
 <pre>
-     *
-    **
-   ***
-  ****
- *****
+     @
+    @@
+   @@@
+  @@@@
+ @@@@@
 </pre>
 and so on.
 
 Hint: You may want to print the triangle without spaces first. For example, an input of 5 would output:
 <pre>
- *
- **
- ***
- ****
- *****
+ @
+ @@
+ @@@
+ @@@@
+ @@@@@
 </pre>
  Once you do this, add the spaces in to finish the project.
  
