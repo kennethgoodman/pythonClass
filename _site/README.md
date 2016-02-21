@@ -84,7 +84,7 @@ Will be used for sharing code and learning python
 							<a href="#names-and-ages">Names and ages</a>
 						</li>
 						<li>
-							<a href="#star-triangle">star triangle</a>
+							<a href="#at-triangle">at triangle</a>
 						</li>
 					</ul>
 				</li>
@@ -631,7 +631,7 @@ If you are having trouble with importing, you can just copy and paste the code o
 2. [Loops](#loops)
 3. [Homework](#homework-class-3)
 	- [Names and ages](#names-and-ages)
-	- [star triangle](#star-triangle)
+	- [at triangle](#at-triangle)
 	
 #### Reading Class 3
 Read through [this on loops](http://www.tutorialspoint.com/python/python_loops.htm) carefully as well.
@@ -686,9 +686,9 @@ Get 10 names and their assoceated ages from the user, print to the screen: the o
 
 It is up to you to choose how the user will know what to type and how you store the data. 
 
-##### star triangle
+##### at triangle
 
-Get a height from the user and print a triangle (using stars) to the screen using that height as the number of stars on the bottom row. 
+Get a height from the user and print a triangle (using the at symbol, @) to the screen using that height as the number of @ symbols on the bottom row. 
 
 For example if the user enters: 3, the output should be:
 <pre>
