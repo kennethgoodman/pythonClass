@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/pythonClass/">Python Class</a>
+            <a class="navbar-brand" href="http://kennethgoodman.github.io/">Kenneth Goodman</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
@@ -17,12 +17,15 @@
                 <li {% if page.title == 'Entire Course' %}class="active dropdown"{% else %}class="dropdown"{% endif %}>
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Entire Course<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/pythonClass/sitePages/readme.html">        Outline</a></li>
+                        <li>
+                            <a href="/pythonClass/sitePages/readme.html">Outline</a>
+                        </li>
                         {% for i in (1..10) %}
                             <li>
                                 <a href="/pythonClass/sitePages/readme.html#class-{{ i }}">Class {{ i }}</a>  
                             </li>
                         {% endfor %}
+                        
                     </ul>
                 </li>
                 {% for p in site.pages %}
@@ -30,6 +33,11 @@
                         {% if p.title == "About" %}{% elsif p.title == "Home" %}{% elsif p.title == "Entire Course" %}{% else %}<a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>{% endif %}
                     </li>
                 {% endfor %}
+                <!--
+                <li {% if page.url == '{{site.baseurl}}/sitePages/class10.html' %}class="active"{% endif %}>
+                    <a href="{{site.baseurl}}/sitePages/class10.html">Class 10</a>
+                </li>
+                -->
             </ul>
         </div>
     </div>

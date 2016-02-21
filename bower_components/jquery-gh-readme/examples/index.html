@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery gh-readme Plugin</title>
+		<script src="../node_modules/jquery/dist/jquery.js"></script>
+		<script src="../dist/jquery.gh-readme.min.js"></script>
+		<script>
+			$(function () {
+				var options = {
+					owner: 'zmckinnon',
+					repo: 'jquery-gh-readme'
+				};
+				$('#readme').readme(options);
+			});
+		</script>
+	</head>
+	<body>
+		<div id="readme"></div>
+	</body>
+</html>

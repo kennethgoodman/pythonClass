@@ -1,0 +1,99 @@
+---
+layout: default
+title: Class 5
+base: ../
+---
+<div class="ClassMaterial">
+    <h3>
+<a id="class-5" class="anchor" href="#class-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Class 5</h3>
+
+<ol>
+<li><a href="#reading-class-5">Reading</a></li>
+<li><a href="#recursion">Recursion</a></li>
+<li><a href="#lambdas">Lambdas</a></li>
+<li>
+<a href="#homework-class-5">Homework</a>
+
+<ul>
+<li><a href="#tower-of-hanoi">Tower of Hanoi</a></li>
+<li>
+<a href="#vigenere-cipher">Vigenere Cipher</a> </li>
+</ul>
+</li>
+</ol>
+
+<h4>
+<a id="reading-class-5" class="anchor" href="#reading-class-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Reading Class 5</h4>
+
+<p>Skim through <a href="http://www.tutorialspoint.com/python/python_exceptions.htm">this on exceptions</a>
+Read through <a href="https://en.wikipedia.org/wiki/Tower_of_Hanoi">wiki on tower of hanoi</a> as we will be using it a lot this class.</p>
+
+<h4>
+<a id="recursion" class="anchor" href="#recursion" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Recursion</h4>
+
+<p>Recursion is the act of a function calling itself. A great example of this is the factorial function in mathematics.</p>
+
+<p>In mathematics, n! (pronounced n factorial) is written as n * (n-1)! where 0! = 1! = 1, so 
+5! = 5 * 4! = 5 * 4 * 3! = 5 * 4 * 3 * 2! = 5 * 4 * 3 * 2 * 1! = 5 * 4 * 2 * 1 = 120</p>
+
+<p>When we write recursive functions, we usually have a base case of when we should stop, and we want to move towards that base case on every interation of the function.</p>
+
+<p>If we wanted to write a function to compute a factorial, we would write:</p>
+
+<div class="highlight highlight-source-python"><pre><span class="pl-k">def</span> <span class="pl-en">factorial</span>(<span class="pl-smi">n</span>):
+    <span class="pl-k">if</span> n <span class="pl-k">==</span> <span class="pl-c1">1</span>: <span class="pl-c"># our base case</span>
+        <span class="pl-k">return</span> <span class="pl-c1">1</span> <span class="pl-c"># return 1 since 1! = 1</span>
+    <span class="pl-k">else</span>:
+        <span class="pl-k">return</span> n <span class="pl-k">*</span> factorial(n <span class="pl-k">-</span> <span class="pl-c1">1</span>) <span class="pl-c"># n! = n * (n-1)!</span></pre></div>
+
+<p>As we see here, we have a base case when we stop (when n = 1) and on each interation n gets closer to the base case, assuming the user enters a positive integer.</p>
+
+<h4>
+<a id="lambdas" class="anchor" href="#lambdas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Lambdas</h4>
+
+<p>Lambdas are anonymous functions, or functions that dont have names, they are used when you want to write short one line functions.</p>
+
+<p>To see the usefulness of this, we will expand the concept of arguements in functions, and maybe you've realized this already, but functions can take functions as arguements. Lets look at an example where this would be usefule:</p>
+
+<div class="highlight highlight-source-python"><pre>
+<span class="pl-k">def</span> <span class="pl-en">square</span>(<span class="pl-smi">x</span>):
+    <span class="pl-k">return</span> x<span class="pl-k">*</span>x
+<span class="pl-k">def</span> <span class="pl-en">cube</span>(<span class="pl-smi">x</span>):
+    <span class="pl-k">return</span> x<span class="pl-k">*</span>x<span class="pl-k">*</span>x
+<span class="pl-k">def</span> <span class="pl-en">sum_from_a_to_b</span>(<span class="pl-smi">a</span>,<span class="pl-smi">b</span>,<span class="pl-smi">function</span>):
+    currentSum <span class="pl-k">=</span> <span class="pl-c1">0</span>
+    <span class="pl-k">for</span> x <span class="pl-k">in</span> <span class="pl-c1">range</span>(a,b<span class="pl-k">+</span><span class="pl-c1">1</span>):
+        currentSum <span class="pl-k">=</span> currentSum <span class="pl-k">+</span> function(x)
+    <span class="pl-k">return</span> currentSum
+ <span class="pl-c">#now lets use it</span>
+<span class="pl-c1">print</span>( sum_from_a_to_b(<span class="pl-c1">1</span>,<span class="pl-c1">10</span>,square) ) <span class="pl-c"># will print the sum of the squares</span>
+<span class="pl-c1">print</span>( sum_from_a_to_b(<span class="pl-c1">1</span>,<span class="pl-c1">10</span>,cube) )   <span class="pl-c"># will print the sum of the cubes</span></pre></div>
+
+<p>Now what if we dont want to create a new function like cube that we will only use once, well we can just use a lambda:</p>
+
+<div class="highlight highlight-source-python"><pre>
+<span class="pl-c1">print</span>(sum_from_a_to_b(<span class="pl-c1">1</span>,<span class="pl-c1">10</span>, <span class="pl-k">lambda</span> <span class="pl-smi">x</span>: x<span class="pl-k">*</span>x<span class="pl-k">*</span>x) ) <span class="pl-c">#will print the sum of the cubes</span>
+</pre></div>
+
+<h4>
+<a id="homework-class-5" class="anchor" href="#homework-class-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Homework Class 5</h4>
+
+<h5>
+<a id="tower-of-hanoi" class="anchor" href="#tower-of-hanoi" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tower of Hanoi</h5>
+
+<p>In the tower of hanoi there are three towers with N rings on the first one (in ascending order). The goal of the game is to move all the rings to the middle tower. The rules are simple, you may only move one ring at a time and a ring can only be placed on a ring that is larger than itself.</p>
+
+<p>Open up the file for this class and play the game on your terminal/command line to get a feel for the game.</p>
+
+<p>Then try to implement solve, an algorithm that will win the game automatically for you.</p>
+
+<h5>
+<a id="vigenere-cipher" class="anchor" href="#vigenere-cipher" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vigenere Cipher</h5>
+
+<p>In this cipher our key is not a single number, but rather a word or series of numbers. The code is encripted with by cycling through each letter of the code and key at the same time, using a mini caesar cypher on each letter.</p>
+
+<p>For example if our code is 'abc' and our key is '123' then 'a' gets shifted one place, 'b' two and 'c' three, so we get as an output 'bdf'. If our key is shorter than our code we just wrap around and start again. Again 'z' + 1 = 'a'.</p>
+
+<p>Decripting this algorithm is a bit harder, but not impossible. This problem is a bit more advanced and uses frequency analysis and can be implemented with machine learning.</p>
+
+</div>

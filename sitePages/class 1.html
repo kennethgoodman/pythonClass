@@ -1,0 +1,107 @@
+---
+layout: default
+title: Class 1
+base: ../
+---
+<div class="ClassMaterial">
+    <h3>
+    <a id="class-1" class="anchor" href="#class-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Class 1</h3>
+
+    <ol>
+    <li><a href="#scratch">Scratch</a></li>
+    <li>
+    <a href="setting-up-python-and-package-managers">Setting up python</a>
+
+    <ul>
+    <li><a href="#nix-operating-systems-such-as-linux-unix-mac-osx">Linux, Unix or Mac OSX</a></li>
+    <li><a href="#windows">Windows</a></li>
+    </ul>
+    </li>
+    <li><a href="#homework-class-1">Homework</a></li>
+    <li><a href="#text-editor">Text editor</a></li>
+    <li><a href="#first-program">First program</a></li>
+    </ol>
+
+    <h4>
+    <a id="scratch" class="anchor" href="#scratch" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Scratch</h4>
+
+    <p>To start getting our heads to think more programmatically, we will start with scratch, a free software built to learn the ideas behind coding from the great people at MIT. linked <a href="https://scratch.mit.edu/">here</a>.</p>
+
+    <p>To start, I would advise you to create a project and play around.</p>
+
+    <p>If you get stuck, MIT put out a couple tutorial videos <a href="https://scratch.mit.edu/help/videos/#">here</a></p>
+
+    <p>While playing around, it is advised to use blocks from the control section, this will help you create more powerful animations.</p>
+
+    <h4>
+    <a id="setting-up-python-and-package-managers" class="anchor" href="#setting-up-python-and-package-managers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up python and package managers</h4>
+
+    <p>For all systems this <a href="http://www.tutorialspoint.com/python/python_environment.htm">tutorial</a> should come in handy if you get stuck.</p>
+
+    <h5>
+    <a id="nix-operating-systems-such-as-linux-unix-mac-osx" class="anchor" href="#nix-operating-systems-such-as-linux-unix-mac-osx" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>*nix operating systems such as linux, unix, mac osx</h5>
+
+    <p>Before you start, you may want to read up on a bash primer, or just learn the basic commands.</p>
+
+    <p>here is a <a href="http://ss64.com/bash/">bash reference</a>. Of course you do not have to know all of them, but some of them you will use more then others, such as: cd, ls, mkdir, find.</p>
+
+    <p>Python usually comes installed on these operating systems. To check, open your applications and search for terminal. Once it is opened type</p>
+
+    <div class="highlight highlight-source-shell"><pre>python --version</pre></div>
+
+    <p>You should see something like: 2.7.11</p>
+
+    <p>If not, you can download python <a href="https://www.python.org/downloads/">here</a></p>
+
+    <p>Google has put out a setup page for python also, linked <a href="https://developers.google.com/edu/python/set-up?hl=en">here</a></p>
+
+    <p>For mac, a great package manager to have is <a href="http://brew.sh/">homebrew</a>, download and instalation is advised.</p>
+
+    <h5>
+    <a id="windows" class="anchor" href="#windows" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Windows</h5>
+
+    <p>Before you start, we will be using the command line, so reading up on a command line <a href="http://ss64.com/nt/">reference</a> is advised. You don't need to learn all the commands, just some of the more useful ones (such as cd, dir, find, help, md, move, path)</p>
+
+    <p>You can test to see if python is install on your machine opening the cmd application and typing: python --version </p>
+
+    <p>if you dont get back a version such as: 2.7.11, then you need to download and install it <a href="https://www.python.org/downloads/">here</a></p>
+
+    <p>Google has put out a setup page for python also, linked <a href="https://developers.google.com/edu/python/set-up?hl=en">here</a></p>
+
+    <h5>
+    <a id="text-editor" class="anchor" href="#text-editor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text editor</h5>
+
+    <p>A text editor is a program that will allow a user to edit text. When you program, you will usually want to use a text editor with a certain text format. For example, when you use microsoft word, the document ends with .doc, you might have seen .pdf, .jpg, .gif or various others, for python we use .py. </p>
+
+    <p>Sublime text is a great editor that uses colors and auto complete to make coding easier for the user and better overall experience. You can download it <a href="http://www.sublimetext.com/">here</a>.</p>
+
+    <h5>
+    <a id="first-program" class="anchor" href="#first-program" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>First program</h5>
+
+    <p>After you download sublime (or you can use any text editor) open a new file and save it as: helloworld.py in the documents</p>
+
+    <p>On the first line write:</p>
+
+    <div class="highlight highlight-source-python"><pre><span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Hello World!<span class="pl-pds">"</span></span>)</pre></div>
+
+    <p>Save the file and open your terminal/command line. Using your appropriate commands (for windows and *unix use: cd ),
+    change into the directory where your file is saved. </p>
+
+    <p>This: </p>
+
+    <div class="highlight highlight-source-shell"><pre><span class="pl-c1">cd</span> documents </pre></div>
+
+    <p>Should work, but you might need to use ls/dir to help find the documents folder. Once you changed into the documents directory write:</p>
+
+    <div class="highlight highlight-source-shell"><pre>python helloworld.py</pre></div>
+
+    <p>Which if you have done everything correctly, should write to the screen: Hello World!</p>
+
+    <h4>
+    <a id="homework-class-1" class="anchor" href="#homework-class-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Homework Class 1</h4>
+
+    <ol>
+    <li>For homework this class, create a scratch project that involves at least three different control blocks, two motion blocks, two event blocks, and two operators blocks.</li>
+    <li>Set up python on your machine</li>
+    </ol>
+</div>

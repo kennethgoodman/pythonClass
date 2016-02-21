@@ -1,0 +1,111 @@
+---
+layout: default
+title: Class 3
+base: ../
+---
+<div class="ClassMaterial">
+    <h3>
+<a id="class-3" class="anchor" href="#class-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Class 3</h3>
+
+<ol>
+<li><a href="#reading-class-3">Reading</a></li>
+<li><a href="#loops">Loops</a></li>
+<li>
+<a href="#homework-class-3">Homework</a>
+
+<ul>
+<li><a href="#names-and-ages">Names and ages</a></li>
+<li><a href="#hashtag-triangle">Hashtag triangle</a></li>
+</ul>
+</li>
+</ol>
+
+<h4>
+<a id="reading-class-3" class="anchor" href="#reading-class-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Reading Class 3</h4>
+
+<p>Read through <a href="http://www.tutorialspoint.com/python/python_loops.htm">this on loops</a> carefully as well.
+Skim through <a href="http://www.tutorialspoint.com/python/python_lists.htm">this on Lists</a>.
+Skim through <a href="http://www.tutorialspoint.com/python/python_tuples.htm">this on tuples</a>.
+Skim through <a href="http://www.tutorialspoint.com/python/python_dictionary.htm">this on python dictionaries</a>
+Skim through <a href="https://docs.python.org/2/tutorial/controlflow.html">Control Flow Python</a>, as a general rule on this particular page, the closer the section is to the top of the page, the more important it is at this moment.</p>
+
+<h4>
+<a id="looping" class="anchor" href="#looping" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>looping</h4>
+
+<p>In programmaning, arguably the most important concept is looping. Looping alows the user to write a command one time and tell the computer to run it as many times as possible. For example, on your calender you may repeat an event every thursday, it would be extremely annoying and time consuming if you were to have to manually create the same event for thursday, rather telling the computer one time what your event is and then repeating it every thursday until a set date is fast and convienent.</p>
+
+<p>In python there are two main ways to loop, for loops and while loops, you can read more about them <a href="https://wiki.python.org/moin/ForLoop">here</a>.</p>
+
+<p>A for loop usually has a set start and end, it is used generally when you know the amount of times you want the loop to run.</p>
+
+<p>A while loop is generally used when you are unsure the amount of times you need the loop to run. For example, you may want a loop to run every day until it rains, here you don't know the amount of days (times) you need it to run, just when to stop.</p>
+
+<p>The syntax is simple:</p>
+
+<p>for loop:</p>
+
+<div class="highlight highlight-source-python"><pre>
+<span class="pl-s"><span class="pl-pds">'''</span> program to output the numbers from 1 to 25 <span class="pl-pds">'''</span></span>
+
+<span class="pl-k">for</span> x <span class="pl-k">in</span> <span class="pl-c1">range</span>(<span class="pl-c1">1</span>,<span class="pl-c1">26</span>): <span class="pl-c"># this runs from 1 through 26 (not including 26)</span>
+    <span class="pl-c1">print</span>(x) <span class="pl-c"># on every iteration x will be set to the next number and then we print it</span>
+</pre></div>
+
+<p>while loop:</p>
+
+<div class="highlight highlight-source-python"><pre>
+<span class="pl-s"><span class="pl-pds">'''</span> An infinite loop program, this program will never stop, so if you try to run it, press control-c to stop your computer at some point. <span class="pl-pds">'''</span></span>
+
+x <span class="pl-k">=</span> <span class="pl-c1">1</span>
+<span class="pl-k">while</span> <span class="pl-c1">True</span>: <span class="pl-c"># meaning run always</span>
+    <span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>x is now <span class="pl-pds">"</span></span> <span class="pl-k">+</span> <span class="pl-c1">str</span>(x)) <span class="pl-c"># print the current value of x, </span>
+    <span class="pl-c">#need to put x in the str() function so that print understands it, don't worry about that for now </span>
+    x <span class="pl-k">=</span> x <span class="pl-k">+</span> <span class="pl-c1">1</span> <span class="pl-c"># increment x by 1</span>
+</pre></div>
+
+<h4>
+<a id="homework-class-3" class="anchor" href="#homework-class-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Homework Class 3</h4>
+
+<h5>
+<a id="names-and-ages" class="anchor" href="#names-and-ages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Names and ages</h5>
+
+<p>Get 10 names and their assoceated ages from the user, print to the screen: the oldest persion and their age.</p>
+
+<h5>
+<a id="hashtag-triangle" class="anchor" href="#hashtag-triangle" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hashtag triangle</h5>
+
+<p>Get a height from the user and print a triangle (using hashtags) to the screen using that height as the number of hashtags on the bottom row. </p>
+
+<p>For example if the user enters: 3, the output should be:</p>
+
+<pre>
+   #
+  ##
+ ###
+</pre>
+ 
+
+<p>If the user enters 5, the output should be:</p>
+
+<pre>
+     #
+    ##
+   ###
+  ####
+ #####
+</pre>
+
+<p>and so on.</p>
+
+<p>Hint: You may want to print the triangle without spaces first. For example, an input of 5 would output:</p>
+
+<pre>
+ #
+ ##
+ ###
+ ####
+ #####
+</pre>
+
+<p>Once you do this, add the spaces in to finish the project.</p>
+</div>
