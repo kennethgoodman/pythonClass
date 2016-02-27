@@ -1,4 +1,4 @@
-# python class
+# python class is awesome
 
 
 Will be used for sharing code and learning python
