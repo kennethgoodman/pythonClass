@@ -19,12 +19,10 @@ print(name + ",", 'you are', age,'years old')
 
 
 # gets three names and prints them
-kidsInClass = 0
 kids = []
-while kidsInClass < 3:
+while len(kids) < 3:
 	kid = input("enter a name: ")
-	while not all(letter.isalpha() or letter.isspace() for letter in name):
-		kid = input(str(name) + " is not a name that only contains letters or spaces, re-enter: ")
+	while not all(letter.isalpha() or letter.isspace() for letter in kid):
+		kid = input(str(kid) + " is not a name that only contains letters or spaces, re-enter: ")
 	kids.append(kid)
-	kidsInClass = kidsInClass + 1
 print(kids)
