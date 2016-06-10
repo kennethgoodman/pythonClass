@@ -22,7 +22,7 @@ def getAge():
 	print('Enter your age: ')
 	while True:
 		age = input()
-		if aNumber and int(float(age)) in between(0, 120): #if number not between 0 and 120
+		if aNumber(age) and int(float(age)) in between(0, 120): #if number not between 0 and 120
 			return int(age)
 		print(str(age) + " is not a number or reasonable age, re-enter: ")
 def findMaxIndex(array):
