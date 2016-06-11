@@ -130,7 +130,7 @@ Will be used for sharing code and learning python
 					<a href="#reading-class-5">Reading</a>
 				</li>
 				<li>
-					<a href="#recursion">Recusion</a>
+					<a href="#recursion">Recursion</a>
 				</li>
 				<li>
 					<a href="#lambdas">Lambdas</a>
