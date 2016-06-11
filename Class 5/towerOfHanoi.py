@@ -30,9 +30,9 @@ def move(towers, fromTower, toTower):
 # then move n-1 rings from that tower to correct tower
 def solve(height,towers, fromTower, toTower, withTower):
 	if height >= 1:
-		solve(height-1,towers, fromTower,withTower,toTower)
+		solve(height-1,towers, fromTower, withTower, toTower)
 		move(towers,fromTower,toTower)
-		solve(height-1,towers, withTower,toTower, fromTower)
+		solve(height-1, towers, withTower, toTower, fromTower)
 def win(towers):
 	if len(towers[0]) == 0 and (len(towers[1]) == 0 or len(towers[2]) == 0):
 		return True
@@ -43,8 +43,8 @@ def playTowersOfHanoi():
     towers = createTowers(rings)
     while True:
     	printTowers(towers)
-    	fromTower = int(input("Which tower do you want to move from, 0, 1, or 2: "))
-    	toTower   = int(input("Which tower do you want to move to,   0, 1, or 2: "))
+    	fromTower = int(input("Which tower do you want to move from, 1, 2, or 3: "))-1 
+    	toTower   = int(input("Which tower do you want to move to,   1, 2, or 3: "))-1
     	if(fromTower != toTower):
     		try:
     			move(towers,fromTower, toTower)
@@ -53,4 +53,5 @@ def playTowersOfHanoi():
     	if win(towers):
     		print("You Won")
     		return
+
 playTowersOfHanoi()
